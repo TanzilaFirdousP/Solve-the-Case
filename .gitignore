@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Detective AI project files
+data/DWIE/
+data/processed/
+frontend/node_modules/
+frontend/dist/
