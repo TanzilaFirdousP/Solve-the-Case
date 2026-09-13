@@ -1,6 +1,5 @@
 import json
 import math
-
 from collections import defaultdict, Counter
 from itertools import combinations
 from pathlib import Path
@@ -19,31 +18,50 @@ DATA_DIR = (
 OUTPUT_DIR = PROJECT_ROOT / "data" / "processed"
 
 
-# =========================================================
-# CONFIGURATION
-# =========================================================
-
 MIN_CASE_DOCS = 3
 MAX_CASE_DOCS = 12
-
 TOP_CASES = 15
 
 
-# Frames that make a cluster especially suitable for
-# a detective/investigation style application.
+# ---------------------------------------------------------
+# Investigation-oriented event weights
+# ---------------------------------------------------------
+
 INVESTIGATIVE_FRAMES = {
-    "trial-hearing",
-    "charge-indict",
-    "arrest-jail",
-    "convict",
-    "sentence",
-    "attack",
-    "extradite",
-    "release-parole",
-    "sue",
-    "acquit",
-    "appeal",
-    "execute",
+    "trial-hearing": 6,
+    "charge-indict": 6,
+    "arrest-jail": 6,
+    "convict": 6,
+    "sentence": 6,
+    "attack": 5,
+    "execute": 5,
+    "extradite": 5,
+    "appeal": 4,
+    "acquit": 4,
+    "release-parole": 4,
+    "sue": 3,
+    "die": 2,
+    "demonstrate": 1,
+}
+
+
+# Frames that strongly indicate non-investigative content
+SPORT_FRAMES = {
+    "cpn-game",
+}
+
+
+# Entity tags especially useful for detective-style cases
+INVESTIGATIVE_ENTITY_TAGS = {
+    "type::offender",
+    "type::victim",
+    "type::criminal_org",
+    "type::armed_movement",
+    "type::police_org",
+    "type::court",
+    "type::judge",
+    "type::police_per",
+    "type::justice_per",
 }
 
 
@@ -88,20 +106,18 @@ def entity_weight(tags):
 
     category = get_entity_category(tags)
 
-    weights = {
+    return {
         "person": 3.0,
         "organization": 2.5,
         "event": 2.0,
         "entity": 1.0,
-        "location": 0.3,
-        "other": 0.2,
-    }
-
-    return weights[category]
+        "location": 0.25,
+        "other": 0.15,
+    }.get(category, 0.15)
 
 
 # =========================================================
-# LOAD DOCUMENTS
+# LOAD DWIE
 # =========================================================
 
 def load_documents():
@@ -137,7 +153,7 @@ def load_documents():
                 "concept_id": concept.get("concept"),
             }
 
-        frame_types = [
+        frames = [
             frame.get("type")
             for frame in article.get("frames", [])
             if frame.get("type")
@@ -148,10 +164,10 @@ def load_documents():
             "document_id": document_id,
             "title": title,
             "entities": entities,
+            "frames": frames,
             "relations_count": len(
                 article.get("relations", [])
             ),
-            "frame_types": frame_types,
             "iptc": set(article.get("iptc", [])),
         }
 
@@ -202,7 +218,7 @@ def jaccard(a, b):
 
 
 # =========================================================
-# SCORE ONE ENTITY-CENTERED CASE
+# SCORE ONE CASE
 # =========================================================
 
 def score_case(
@@ -213,17 +229,76 @@ def score_case(
     entity_tags,
 ):
 
-    case_docs = set(
-        entity_to_docs[seed_link]
-    )
+    case_docs = set(entity_to_docs[seed_link])
 
     doc_count = len(case_docs)
 
+    seed_tags = set(
+        entity_tags[seed_link]
+    )
+
+    seed_category = get_entity_category(
+        seed_tags
+    )
+
     # -----------------------------------------------------
-    # Find secondary entities shared inside this case
+    # Frames
+    # -----------------------------------------------------
+
+    frame_counter = Counter()
+
+    investigative_score = 0
+    investigative_docs = 0
+    sport_docs = 0
+
+    for doc_id in case_docs:
+
+        frames = documents[doc_id]["frames"]
+
+        frame_counter.update(frames)
+
+        doc_has_investigative_frame = False
+
+        for frame in frames:
+
+            if frame in INVESTIGATIVE_FRAMES:
+
+                investigative_score += (
+                    INVESTIGATIVE_FRAMES[frame]
+                )
+
+                doc_has_investigative_frame = True
+
+        if doc_has_investigative_frame:
+            investigative_docs += 1
+
+        if any(
+            frame in SPORT_FRAMES
+            for frame in frames
+        ):
+            sport_docs += 1
+
+    # Ignore cases with no investigative event at all.
+    if investigative_score == 0:
+        return None
+
+    sport_ratio = (
+        sport_docs / doc_count
+        if doc_count
+        else 0
+    )
+
+    # Remove obvious sports clusters.
+    if sport_ratio > 0.40:
+        return None
+
+    # -----------------------------------------------------
+    # Secondary entities
     # -----------------------------------------------------
 
     secondary_entities = []
+
+    total_docs = len(documents)
 
     for other_link, other_docs in entity_to_docs.items():
 
@@ -235,10 +310,10 @@ def score_case(
         if len(shared_docs) < 2:
             continue
 
-        # Ignore entities that occur extremely widely.
-        # They provide little case-specific evidence.
         global_frequency = len(other_docs)
 
+        # Very common entities such as Germany and US
+        # should not dominate case discovery.
         if global_frequency > 40:
             continue
 
@@ -246,18 +321,17 @@ def score_case(
 
         category = get_entity_category(tags)
 
-        # Locations are useful as context but should not
-        # strongly define the case.
-        weight = entity_weight(tags)
+        if category == "location":
+            continue
 
         rarity = math.log(
-            (len(documents) + 1)
+            (total_docs + 1)
             / (global_frequency + 1)
         ) + 1
 
         score = (
             len(shared_docs)
-            * weight
+            * entity_weight(tags)
             * rarity
         )
 
@@ -270,7 +344,7 @@ def score_case(
             "category": category,
             "documents": len(shared_docs),
             "global_frequency": global_frequency,
-            "score": score,
+            "score": round(score, 2),
         })
 
     secondary_entities.sort(
@@ -279,35 +353,30 @@ def score_case(
     )
 
     # -----------------------------------------------------
-    # Pairwise specific-entity connectivity
+    # Pair connectivity
     # -----------------------------------------------------
 
     connected_pairs = 0
     possible_pairs = 0
 
     for doc_a, doc_b in combinations(
-        sorted(case_docs),
+        case_docs,
         2
     ):
 
         possible_pairs += 1
 
-        entities_a = set(
-            documents[doc_a]["entities"]
+        shared_entities = (
+            set(documents[doc_a]["entities"])
+            &
+            set(documents[doc_b]["entities"])
         )
 
-        entities_b = set(
-            documents[doc_b]["entities"]
-        )
+        shared_entities.discard(seed_link)
 
-        shared = (
-            entities_a
-            & entities_b
-        ) - {seed_link}
+        informative = []
 
-        informative_shared = []
-
-        for entity in shared:
+        for entity in shared_entities:
 
             if len(entity_to_docs[entity]) > 40:
                 continue
@@ -322,15 +391,15 @@ def score_case(
                 "event",
                 "entity",
             }:
-                informative_shared.append(entity)
+                informative.append(entity)
 
-        if informative_shared:
+        if informative:
             connected_pairs += 1
 
     pair_density = (
         connected_pairs / possible_pairs
         if possible_pairs
-        else 0.0
+        else 0
     )
 
     # -----------------------------------------------------
@@ -340,7 +409,7 @@ def score_case(
     topic_scores = []
 
     for doc_a, doc_b in combinations(
-        sorted(case_docs),
+        case_docs,
         2
     ):
 
@@ -352,93 +421,99 @@ def score_case(
         )
 
     topic_coherence = (
-        sum(topic_scores) / len(topic_scores)
+        sum(topic_scores)
+        / len(topic_scores)
         if topic_scores
-        else 0.0
+        else 0
     )
 
     # -----------------------------------------------------
-    # Frames
-    # -----------------------------------------------------
-
-    frame_counter = Counter()
-
-    for doc_id in case_docs:
-
-        frame_counter.update(
-            documents[doc_id]["frame_types"]
-        )
-
-    documents_with_frames = sum(
-        1
-        for doc_id in case_docs
-        if documents[doc_id]["frame_types"]
-    )
-
-    investigative_frame_count = sum(
-        count
-        for frame, count in frame_counter.items()
-        if frame in INVESTIGATIVE_FRAMES
-    )
-
-    # -----------------------------------------------------
-    # Relations
+    # Relation information
     # -----------------------------------------------------
 
     relation_count = sum(
-        documents[doc_id]["relations_count"]
-        for doc_id in case_docs
+        documents[doc]["relations_count"]
+        for doc in case_docs
     )
 
     # -----------------------------------------------------
-    # Size preference
+    # Seed bonuses
+    # -----------------------------------------------------
+
+    if seed_category == "person":
+        seed_type_bonus = 20
+
+    elif seed_category == "organization":
+        seed_type_bonus = 12
+
+    elif seed_category == "event":
+        seed_type_bonus = 10
+
+    else:
+        seed_type_bonus = 0
+
+    # Extra bonus if DWIE explicitly considers seed
+    # justice/conflict related.
+    investigative_seed_bonus = 0
+
+    for tag in seed_tags:
+
+        if tag in INVESTIGATIVE_ENTITY_TAGS:
+            investigative_seed_bonus += 8
+
+    # -----------------------------------------------------
+    # Case size
     # -----------------------------------------------------
 
     if 4 <= doc_count <= 8:
-        size_score = 20
+        size_bonus = 20
 
     elif doc_count in {3, 9, 10}:
-        size_score = 15
+        size_bonus = 15
 
     else:
-        size_score = 10
+        size_bonus = 8
 
     # -----------------------------------------------------
-    # Seed type
+    # Investigation diversity
     # -----------------------------------------------------
 
-    seed_category = get_entity_category(
-        entity_tags[seed_link]
+    unique_investigative_frames = {
+        frame
+        for frame in frame_counter
+        if frame in INVESTIGATIVE_FRAMES
+    }
+
+    frame_diversity_bonus = (
+        len(unique_investigative_frames)
+        * 5
     )
-
-    seed_type_bonus = {
-        "person": 15,
-        "organization": 10,
-        "event": 8,
-    }.get(seed_category, 0)
 
     # -----------------------------------------------------
     # Secondary entity strength
     # -----------------------------------------------------
 
-    secondary_score = sum(
+    secondary_strength = sum(
         entity["score"]
         for entity in secondary_entities[:8]
     )
 
     # -----------------------------------------------------
-    # Final investigation suitability score
+    # Final score
     # -----------------------------------------------------
 
-    score = (
-        size_score
-        + seed_type_bonus
-        + secondary_score * 0.5
-        + pair_density * 20
-        + topic_coherence * 20
-        + documents_with_frames * 1.5
-        + investigative_frame_count * 3
-        + min(relation_count, 200) * 0.05
+    final_score = (
+        seed_type_bonus
+        + investigative_seed_bonus
+        + size_bonus
+        + investigative_score * 3
+        + investigative_docs * 5
+        + frame_diversity_bonus
+        + secondary_strength * 0.35
+        + pair_density * 12
+        + topic_coherence * 12
+        + min(relation_count, 250) * 0.04
+        - sport_ratio * 50
     )
 
     return {
@@ -448,31 +523,46 @@ def score_case(
             seed_link
         ),
         "seed_category": seed_category,
-        "score": round(score, 2),
+        "seed_tags": sorted(seed_tags),
+
+        "score": round(
+            final_score,
+            2
+        ),
+
         "document_count": doc_count,
+
         "pair_density": round(
             pair_density,
             3
         ),
+
         "topic_coherence": round(
             topic_coherence,
             3
         ),
+
         "relation_count": relation_count,
-        "investigative_frame_count":
-            investigative_frame_count,
-        "frames": dict(
-            frame_counter.most_common()
-        ),
+
+        "investigative_documents":
+            investigative_docs,
+
+        "investigative_score":
+            investigative_score,
+
+        "frames":
+            dict(frame_counter),
+
         "secondary_entities":
             secondary_entities[:10],
+
         "documents": [
             {
                 "document_id": doc_id,
                 "title":
                     documents[doc_id]["title"],
                 "frames":
-                    documents[doc_id]["frame_types"],
+                    documents[doc_id]["frames"],
             }
             for doc_id in sorted(case_docs)
         ],
@@ -480,7 +570,7 @@ def score_case(
 
 
 # =========================================================
-# REMOVE DUPLICATE CASES
+# REMOVE DUPLICATES
 # =========================================================
 
 def deduplicate_cases(cases):
@@ -508,7 +598,7 @@ def deduplicate_cases(cases):
                 existing_docs
             )
 
-            if overlap >= 0.75:
+            if overlap >= 0.70:
                 duplicate = True
                 break
 
@@ -539,16 +629,17 @@ def main():
     )
 
     print(
-        f"Linked entities: {len(entity_to_docs)}"
+        f"Linked entities: "
+        f"{len(entity_to_docs)}"
     )
 
     # -----------------------------------------------------
-    # Find valid seed entities
+    # Candidate seeds
     # -----------------------------------------------------
 
     seeds = []
 
-    for entity_link, doc_ids in entity_to_docs.items():
+    for link, doc_ids in entity_to_docs.items():
 
         frequency = len(doc_ids)
 
@@ -560,30 +651,35 @@ def main():
             continue
 
         if not is_seed_entity(
-            entity_tags[entity_link]
+            entity_tags[link]
         ):
             continue
 
-        seeds.append(entity_link)
+        seeds.append(link)
 
     print(
-        f"Potential case seeds: {len(seeds)}"
+        f"Potential entity seeds: "
+        f"{len(seeds)}"
     )
 
     # -----------------------------------------------------
-    # Score cases
+    # Score
     # -----------------------------------------------------
 
-    cases = [
-        score_case(
+    cases = []
+
+    for seed in seeds:
+
+        result = score_case(
             seed,
             documents,
             entity_to_docs,
             entity_names,
             entity_tags,
         )
-        for seed in seeds
-    ]
+
+        if result:
+            cases.append(result)
 
     cases.sort(
         key=lambda x: x["score"],
@@ -593,7 +689,7 @@ def main():
     cases = deduplicate_cases(cases)
 
     # -----------------------------------------------------
-    # Save COMPLETE results
+    # Save
     # -----------------------------------------------------
 
     OUTPUT_DIR.mkdir(
@@ -603,25 +699,29 @@ def main():
 
     output_path = (
         OUTPUT_DIR
-        / "case_seed_candidates.json"
+        / "investigation_case_candidates.json"
     )
 
     output_path.write_text(
         json.dumps(
             cases,
-            indent=2,
             ensure_ascii=False,
+            indent=2,
         ),
         encoding="utf-8",
     )
 
     # -----------------------------------------------------
-    # Print ONLY concise summary
+    # Print concise output
     # -----------------------------------------------------
 
     print("\n")
     print("=" * 80)
-    print("TOP ENTITY-CENTERED CASE CANDIDATES")
+
+    print(
+        "TOP INVESTIGATION-WORTHY CASES"
+    )
+
     print("=" * 80)
 
     for i, case in enumerate(
@@ -635,11 +735,13 @@ def main():
         )
 
         print(
-            f"  Type: {case['seed_category']}"
+            f"  Type: "
+            f"{case['seed_category']}"
         )
 
         print(
-            f"  Score: {case['score']}"
+            f"  Score: "
+            f"{case['score']}"
         )
 
         print(
@@ -648,33 +750,26 @@ def main():
         )
 
         print(
-            f"  Pair density: "
-            f"{case['pair_density']}"
+            f"  Investigative documents: "
+            f"{case['investigative_documents']}"
         )
 
         print(
-            f"  Topic coherence: "
-            f"{case['topic_coherence']}"
+            f"  Frames: "
+            f"{case['frames']}"
         )
 
         print(
-            f"  Relations: "
-            f"{case['relation_count']}"
+            f"  Secondary entities:"
         )
-
-        print(
-            f"  Investigative frames: "
-            f"{case['investigative_frame_count']}"
-        )
-
-        print("  Secondary entities:")
 
         for entity in (
             case["secondary_entities"][:5]
         ):
 
             print(
-                f"    - {entity['name']} "
+                f"    - "
+                f"{entity['name']} "
                 f"({entity['documents']} docs)"
             )
 
@@ -685,6 +780,7 @@ def main():
             frame_text = ""
 
             if document["frames"]:
+
                 frame_text = (
                     " | "
                     + ", ".join(
@@ -700,9 +796,10 @@ def main():
             )
 
     print(
-        f"\nFull results saved to:\n"
-        f"{output_path}"
+        "\nFull candidates saved to:"
     )
+
+    print(output_path)
 
 
 if __name__ == "__main__":
