@@ -1,0 +1,7173 @@
+[
+  {
+    "frame_id": "DW_1095032_frame_0",
+    "document_id": "DW_1095032",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Abdelghani_Mzoudi",
+        "entity_name": "Abdelghani Mzoudi"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_1095032:concept:4",
+        "entity_name": "Thursday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1213203_frame_0",
+    "document_id": "DW_1213203",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1269079_frame_0",
+    "document_id": "DW_1269079",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1269079_frame_1",
+    "document_id": "DW_1269079",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1335037_frame_0",
+    "document_id": "DW_1335037",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14774284_frame_0",
+    "document_id": "DW_14774284",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Denmark",
+        "entity_name": "Denmark"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_14774284:concept:7",
+        "entity_name": "Wednesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14777482_frame_0",
+    "document_id": "DW_14777482",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Alexander_Lukashenko",
+        "entity_name": "Alexander Lukashenko"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_14777482:concept:9",
+        "entity_name": "Friday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Belarus",
+        "entity_name": "Belarus"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14777482_frame_1",
+    "document_id": "DW_14777482",
+    "frame_type": "elect",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14777482_frame_2",
+    "document_id": "DW_14777482",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14804340_frame_0",
+    "document_id": "DW_14804340",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Saxony-Anhalt",
+        "entity_name": "Saxony-Anhalt"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14838838_frame_0",
+    "document_id": "DW_14838838",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Julian_Assange",
+        "entity_name": "Julian Assange"
+      },
+      {
+        "role": "adjudicator",
+        "entity_id": "wiki:Woolwich_Crown_Court",
+        "entity_name": "Woolwich Crown Court"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:United_Kingdom",
+        "entity_name": "Britain"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14843921_frame_0",
+    "document_id": "DW_14843921",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "doc:DW_14843921:concept:0",
+        "entity_name": "Detlef S."
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_14843921:concept:5",
+        "entity_name": "Tuesday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Koblenz",
+        "entity_name": "Koblenz"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14858431_frame_0",
+    "document_id": "DW_14858431",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14872796_frame_0",
+    "document_id": "DW_14872796",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Guido_Westerwelle",
+        "entity_name": "Guido Westerwelle"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Cairo",
+        "entity_name": "Cairo"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_14872796:concept:7",
+        "entity_name": "Wednesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14883443_frame_0",
+    "document_id": "DW_14883443",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Egypt",
+        "entity_name": "Egypt"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_14883443:concept:2",
+        "entity_name": "March 19"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14923978_frame_0",
+    "document_id": "DW_14923978",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:1._FC_Kaiserslautern",
+        "entity_name": "FC Kaiserslautern"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:Borussia_Mönchengladbach",
+        "entity_name": "Borussia Mönchengladbach"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_14923978:concept:5",
+        "entity_name": "Friday night"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_14929074_frame_0",
+    "document_id": "DW_14929074",
+    "frame_type": "acquit",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Google",
+        "entity_name": "Google"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Berlin",
+        "entity_name": "Berlin"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1496955_frame_0",
+    "document_id": "DW_1496955",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:George_W._Bush",
+        "entity_name": "Bush"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Europe",
+        "entity_name": "Europe"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1499191_frame_0",
+    "document_id": "DW_1499191",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Berlin",
+        "entity_name": "Berlin"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1500234_frame_0",
+    "document_id": "DW_1500234",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15136878_frame_0",
+    "document_id": "DW_15136878",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1514814_frame_0",
+    "document_id": "DW_1514814",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "wiki:Al-Qaeda",
+        "entity_name": "al Qaeda"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Madrid",
+        "entity_name": "Madrid"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_1514814:concept:6",
+        "entity_name": "March 11, 2004"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15148854_frame_0",
+    "document_id": "DW_15148854",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "target",
+        "entity_id": "wiki:International_Monetary_Fund",
+        "entity_name": "International Monetary fund"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1515257_frame_0",
+    "document_id": "DW_1515257",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1522296_frame_0",
+    "document_id": "DW_1522296",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Warsaw",
+        "entity_name": "Warsaw"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15229066_frame_0",
+    "document_id": "DW_15229066",
+    "frame_type": "sentence",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Giovanni_Strangio",
+        "entity_name": "Giovanni Strangio"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Locri",
+        "entity_name": "Locri"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1533149_frame_0",
+    "document_id": "DW_1533149",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1534424_frame_0",
+    "document_id": "DW_1534424",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15433650_frame_0",
+    "document_id": "DW_15433650",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Cyprus",
+        "entity_name": "Cyprus"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15491387_frame_0",
+    "document_id": "DW_15491387",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Ziad_Majed",
+        "entity_name": "Ziad Majed"
+      },
+      {
+        "role": "interviewer",
+        "entity_id": "doc:DW_15491387:concept:42",
+        "entity_name": "Jefferson Chase"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "Deutsche Welle"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15679502_frame_0",
+    "document_id": "DW_15679502",
+    "frame_type": "arrest-jail",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Kim_Dotcom",
+        "entity_name": "Kim Tim Jim Vestor"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:New_Zealand",
+        "entity_name": "New Zealand"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15679502_frame_1",
+    "document_id": "DW_15679502",
+    "frame_type": "charge-indict",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Megaupload",
+        "entity_name": "Megaupload"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Virginia",
+        "entity_name": "Virginia"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15750671_frame_0",
+    "document_id": "DW_15750671",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Dresden",
+        "entity_name": "Dresden"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15760062_frame_0",
+    "document_id": "DW_15760062",
+    "frame_type": "arrest-jail",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Estonia",
+        "entity_name": "Estonia"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15765798_frame_0",
+    "document_id": "DW_15765798",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "awardee",
+        "entity_id": "wiki:Sebastian_Vettel",
+        "entity_name": "Sebastian Vettel"
+      },
+      {
+        "role": "award",
+        "entity_id": "wiki:Silbernes_Lorbeerblatt",
+        "entity_name": "Silver Laurel Leaf"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_15765798:concept:8",
+        "entity_name": "Friday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15768955_frame_0",
+    "document_id": "DW_15768955",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:Bayer_04_Leverkusen",
+        "entity_name": "Bayer Leverkusen"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_15768955:concept:19",
+        "entity_name": "Saturday"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:Bundesliga",
+        "entity_name": "Bundesliga"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15769588_frame_0",
+    "document_id": "DW_15769588",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1578014_frame_0",
+    "document_id": "DW_1578014",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Friedrich_Schiller",
+        "entity_name": "Friedrich Schiller"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15786004_frame_0",
+    "document_id": "DW_15786004",
+    "frame_type": "elect",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Mitt_Romney",
+        "entity_name": "Mitt Romney"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Washington_(state)",
+        "entity_name": "Washington"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15800699_frame_0",
+    "document_id": "DW_15800699",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Olivier_De_Schutter",
+        "entity_name": "Olivier De Schutter"
+      },
+      {
+        "role": "interviewer",
+        "entity_id": "doc:DW_15800699:concept:13",
+        "entity_name": "Chrispin Mwakideu"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "DW"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15816371_frame_0",
+    "document_id": "DW_15816371",
+    "frame_type": "elect",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Joachim_Gauck",
+        "entity_name": "Joachim Gauck"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15829533_frame_0",
+    "document_id": "DW_15829533",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Joachim_Gauck",
+        "entity_name": "Joachim Gauck"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1583453_frame_0",
+    "document_id": "DW_1583453",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:FC_Bayern_Munich",
+        "entity_name": "Bayern Munich"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:1._FC_Nürnberg",
+        "entity_name": "Nuremberg"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:Bundesliga",
+        "entity_name": "Bundesliga"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_1583453:concept:10",
+        "entity_name": "Saturday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15837090_frame_0",
+    "document_id": "DW_15837090",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Minsk",
+        "entity_name": "Minsk"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_15837090:concept:7",
+        "entity_name": "Sunday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15850974_frame_0",
+    "document_id": "DW_15850974",
+    "frame_type": "sue",
+    "slots": [
+      {
+        "role": "plaintiff",
+        "entity_id": "wiki:United_States",
+        "entity_name": "United States"
+      },
+      {
+        "role": "defendant",
+        "entity_id": "wiki:European_Union",
+        "entity_name": "European Union"
+      },
+      {
+        "role": "adjudicator",
+        "entity_id": "wiki:World_Trade_Organization",
+        "entity_name": "World Trade Organization"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15856425_frame_0",
+    "document_id": "DW_15856425",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "wiki:Tuareg_people",
+        "entity_name": "Tuaregs"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Mali",
+        "entity_name": "Mali"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15866486_frame_0",
+    "document_id": "DW_15866486",
+    "frame_type": "extradite",
+    "slots": [
+      {
+        "role": "origin",
+        "entity_id": "wiki:Bahrain",
+        "entity_name": "Bahrain"
+      },
+      {
+        "role": "destination",
+        "entity_id": "wiki:Denmark",
+        "entity_name": "Denmark"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15866668_frame_0",
+    "document_id": "DW_15866668",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Nigeria",
+        "entity_name": "Nigeria"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_15866668:concept:6",
+        "entity_name": "Sunday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15881422_frame_0",
+    "document_id": "DW_15881422",
+    "frame_type": "cpn-accident",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15887562_frame_0",
+    "document_id": "DW_15887562",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Anders_Behring_Breivik",
+        "entity_name": "Anders Behring Breivik"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_15887562:concept:6",
+        "entity_name": "Wednesday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Norway",
+        "entity_name": "Norway"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15932808_frame_0",
+    "document_id": "DW_15932808",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:Oklahoma_City_Thunder",
+        "entity_name": "Oklahoma City Thunder"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:Dallas_Mavericks",
+        "entity_name": "Dallas Mavericks"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:NBA_playoffs",
+        "entity_name": "NBA playoffs"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15950762_frame_0",
+    "document_id": "DW_15950762",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "awardee",
+        "entity_id": "wiki:Wolfgang_Schäuble",
+        "entity_name": "Wolfgang Schäuble"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_15950762:concept:11",
+        "entity_name": "Thursday"
+      },
+      {
+        "role": "award",
+        "entity_id": "wiki:Charlemagne_Prize",
+        "entity_name": "Charlemagne Prize"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Aachen",
+        "entity_name": "Aachen"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_15957187_frame_0",
+    "document_id": "DW_15957187",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:Olympique_Lyonnais_Féminin",
+        "entity_name": "Olympique Lyon"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:1._FFC_Frankfurt",
+        "entity_name": "FFC Frankfurt"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Munich",
+        "entity_name": "Munich"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16049791_frame_0",
+    "document_id": "DW_16049791",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "wiki:Syria",
+        "entity_name": "Syria"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16069323_frame_0",
+    "document_id": "DW_16069323",
+    "frame_type": "convict",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Oracle_Corporation",
+        "entity_name": "Oracle"
+      },
+      {
+        "role": "adjudicator",
+        "entity_id": "wiki:European_Court_of_Justice",
+        "entity_name": "European Court of Justice"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_16069323:concept:7",
+        "entity_name": "Tuesday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Luxembourg",
+        "entity_name": "Luxembourg"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16122203_frame_0",
+    "document_id": "DW_16122203",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "doc:DW_16122203:concept:0",
+        "entity_name": "Phillipp Vorndran"
+      },
+      {
+        "role": "interviewer",
+        "entity_id": "doc:DW_16122203:concept:38",
+        "entity_name": "Bernd Riegert"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1614078_frame_0",
+    "document_id": "DW_1614078",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16199211_frame_0",
+    "document_id": "DW_16199211",
+    "frame_type": "release-parole",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:wikidata:Q547953",
+        "entity_name": "Michelle Martin"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16205079_frame_0",
+    "document_id": "DW_16205079",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Paul_Ryan",
+        "entity_name": "Paul Ryan"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:United_States",
+        "entity_name": "United States"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16249463_frame_0",
+    "document_id": "DW_16249463",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:Borussia_Dortmund",
+        "entity_name": "Borussia Dortmund"
+      },
+      {
+        "role": "winner",
+        "entity_id": "wiki:FC_Schalke_04",
+        "entity_name": "Royal Blues"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:UEFA_Champions_League",
+        "entity_name": "Champions League"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_16249463:concept:11",
+        "entity_name": "Tuesday night"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16252174_frame_0",
+    "document_id": "DW_16252174",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:India",
+        "entity_name": "India"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16277528_frame_0",
+    "document_id": "DW_16277528",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:wikidata:Q2020223",
+        "entity_name": "Oliver Geisselhart"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16319599_frame_0",
+    "document_id": "DW_16319599",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Workers'_Commissions",
+        "entity_name": "CCOO"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_16319599:concept:11",
+        "entity_name": "November 14"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16323028_frame_0",
+    "document_id": "DW_16323028",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1636241_frame_0",
+    "document_id": "DW_1636241",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Horst_Köhler",
+        "entity_name": "Horst Köhler"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16380200_frame_0",
+    "document_id": "DW_16380200",
+    "frame_type": "extradite",
+    "slots": [
+      {
+        "role": "origin",
+        "entity_id": "wiki:Pakistan",
+        "entity_name": "Pakistan"
+      },
+      {
+        "role": "destination",
+        "entity_id": "wiki:Afghanistan",
+        "entity_name": "Afghanistan"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16403659_frame_0",
+    "document_id": "DW_16403659",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:FC_Bayern_Munich",
+        "entity_name": "Bayern Munich"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:Hannover_96",
+        "entity_name": "Hannover"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_16403659:concept:12",
+        "entity_name": "Saturday"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:Bundesliga",
+        "entity_name": "Bundesliga"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16412398_frame_0",
+    "document_id": "DW_16412398",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Hungary",
+        "entity_name": "Hungary"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16435183_frame_0",
+    "document_id": "DW_16435183",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16456972_frame_0",
+    "document_id": "DW_16456972",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Connecticut",
+        "entity_name": "Connecticut"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16509047_frame_0",
+    "document_id": "DW_16509047",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:New_York_City",
+        "entity_name": "New York City"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16545517_frame_0",
+    "document_id": "DW_16545517",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Dmitry_Medvedev",
+        "entity_name": "Dmitry Medvedev"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Davos",
+        "entity_name": "Davos"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16595146_frame_0",
+    "document_id": "DW_16595146",
+    "frame_type": "transfer-ownership",
+    "slots": [
+      {
+        "role": "buyer",
+        "entity_id": "wiki:Comcast",
+        "entity_name": "Comcast Corp."
+      },
+      {
+        "role": "seller",
+        "entity_id": "wiki:General_Electric",
+        "entity_name": "General Electric"
+      },
+      {
+        "role": "artifact",
+        "entity_id": "wiki:NBCUniversal",
+        "entity_name": "NBCUniversal"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16611008_frame_0",
+    "document_id": "DW_16611008",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Laurent_Gbagbo",
+        "entity_name": "Laurent Gbagbo"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:The_Hague",
+        "entity_name": "The Hague"
+      },
+      {
+        "role": "adjudicator",
+        "entity_id": "wiki:International_Criminal_Court",
+        "entity_name": "International Criminal Court"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16625503_frame_0",
+    "document_id": "DW_16625503",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "awardee",
+        "entity_id": "wiki:Christoph_Waltz",
+        "entity_name": "Christoph Waltz"
+      },
+      {
+        "role": "award",
+        "entity_id": "wiki:Academy_Award_for_Best_Supporting_Actor",
+        "entity_name": "Best Supporting Actor"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16643515_frame_0",
+    "document_id": "DW_16643515",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Nuon_Chea",
+        "entity_name": "Nuon Chea"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Cambodia",
+        "entity_name": "Cambodia"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16643515_frame_1",
+    "document_id": "DW_16643515",
+    "frame_type": "demonstrate",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16695506_frame_0",
+    "document_id": "DW_16695506",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16699120_frame_0",
+    "document_id": "DW_16699120",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Xi_Jinping",
+        "entity_name": "Xi Jinping"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Jacob_Zuma",
+        "entity_name": "Jacob Zuma"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Durban",
+        "entity_name": "Durban"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16720057_frame_0",
+    "document_id": "DW_16720057",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "target",
+        "entity_id": "wiki:Gaza_Strip",
+        "entity_name": "Gaza Strip"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16720088_frame_0",
+    "document_id": "DW_16720088",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16781050_frame_0",
+    "document_id": "DW_16781050",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Pakistan",
+        "entity_name": "Pakistan"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16812601_frame_0",
+    "document_id": "DW_16812601",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16813176_frame_0",
+    "document_id": "DW_16813176",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16932401_frame_0",
+    "document_id": "DW_16932401",
+    "frame_type": "cpn-interview",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16937584_frame_0",
+    "document_id": "DW_16937584",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Anatoly_Iksanov",
+        "entity_name": "Anatoly Iksanov"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_16937584:concept:5",
+        "entity_name": "director"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Bolshoi_Theatre",
+        "entity_name": "Bolshoi Theater"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16938893_frame_0",
+    "document_id": "DW_16938893",
+    "frame_type": "appeal",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "doc:DW_16938893:concept:1",
+        "entity_name": "Britain"
+      },
+      {
+        "role": "adjudicator",
+        "entity_id": "wiki:European_Court_of_Human_Rights",
+        "entity_name": "European Court of Human Rights"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16940974_frame_0",
+    "document_id": "DW_16940974",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "doc:DW_16940974:concept:5",
+        "entity_name": "Thorsten Onno Bender"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16947555_frame_0",
+    "document_id": "DW_16947555",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Turkey",
+        "entity_name": "Turkey"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16959482_frame_0",
+    "document_id": "DW_16959482",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16961776_frame_0",
+    "document_id": "DW_16961776",
+    "frame_type": "arrest-jail",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Robert_Seldon_Lady",
+        "entity_name": "Robert Seldon Lady"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Panama",
+        "entity_name": "Panama"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_16988090_frame_0",
+    "document_id": "DW_16988090",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17011825_frame_0",
+    "document_id": "DW_17011825",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Ibrahim_Boubacar_Keïta",
+        "entity_name": "Ibrahim Boubacar Keita"
+      },
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Soumaïla_Cissé",
+        "entity_name": "Soumaila Cisse"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Mali",
+        "entity_name": "Mali"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17017102_frame_0",
+    "document_id": "DW_17017102",
+    "frame_type": "release-parole",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Tel_Aviv",
+        "entity_name": "Tel Aviv"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17023819_frame_0",
+    "document_id": "DW_17023819",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17028425_frame_0",
+    "document_id": "DW_17028425",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Egypt",
+        "entity_name": "Egypt"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17042970_frame_0",
+    "document_id": "DW_17042970",
+    "frame_type": "die",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17042970_frame_1",
+    "document_id": "DW_17042970",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "wiki:Bashar_al-Assad",
+        "entity_name": "Bashar al-Assad"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Syria",
+        "entity_name": "Syria"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17061260_frame_0",
+    "document_id": "DW_17061260",
+    "frame_type": "release-parole",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Iran",
+        "entity_name": "Iran"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17100314_frame_0",
+    "document_id": "DW_17100314",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:wikidata:Q14925748",
+        "entity_name": "Paylos Fyssas"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17103531_frame_0",
+    "document_id": "DW_17103531",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Angela_Merkel",
+        "entity_name": "Angela Merkel"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_17103531:concept:8",
+        "entity_name": "Sunday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17129176_frame_1",
+    "document_id": "DW_17129176",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "doc:DW_17129176:concept:6",
+        "entity_name": "Nicola Casarini"
+      },
+      {
+        "role": "interviewer",
+        "entity_id": "doc:DW_17129176:concept:28",
+        "entity_name": "Gabriel Domínguez"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17148498_frame_0",
+    "document_id": "DW_17148498",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17148498_frame_1",
+    "document_id": "DW_17148498",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Alitalia",
+        "entity_name": "Compagnia Aerea Italia"
+      },
+      {
+        "role": "entity",
+        "entity_id": "doc:DW_17148498:concept:10",
+        "entity_name": "UIL Trasporti"
+      },
+      {
+        "role": "entity",
+        "entity_id": "doc:DW_17148498:concept:15",
+        "entity_name": "Filt Cgil"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_17148498:concept:8",
+        "entity_name": "Wednesday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Rome",
+        "entity_name": "Rome"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17148498_frame_2",
+    "document_id": "DW_17148498",
+    "frame_type": "declare-bankruptcy",
+    "slots": [
+      {
+        "role": "org",
+        "entity_id": "wiki:Alitalia",
+        "entity_name": "Compagnia Aerea Italia"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Italy",
+        "entity_name": "Italy"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17158719_frame_0",
+    "document_id": "DW_17158719",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Hans_Riegel",
+        "entity_name": "Johann Riegel"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_17158719:concept:8",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17178299_frame_0",
+    "document_id": "DW_17178299",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Syria",
+        "entity_name": "Syria"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17184126_frame_0",
+    "document_id": "DW_17184126",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "awardee",
+        "entity_id": "wiki:Sibylle_Lewitscharoff",
+        "entity_name": "Sybille Lewitscharoff"
+      },
+      {
+        "role": "award",
+        "entity_id": "wiki:Georg_Büchner_Prize",
+        "entity_name": "The Georg Büchner Prize"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_17184126:concept:6",
+        "entity_name": "26.10.2013"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17272457_frame_0",
+    "document_id": "DW_17272457",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17341712_frame_0",
+    "document_id": "DW_17341712",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Canacona",
+        "entity_name": "Canacona"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_17341712:concept:6",
+        "entity_name": "Saturday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17345070_frame_0",
+    "document_id": "DW_17345070",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:South_Sudan",
+        "entity_name": "South Sudan"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Ethiopia",
+        "entity_name": "Ethiopia"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17347807_frame_0",
+    "document_id": "DW_17347807",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Danny_Ayalon",
+        "entity_name": "Danny Ayalon"
+      },
+      {
+        "role": "interviewer",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "DW"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17372081_frame_0",
+    "document_id": "DW_17372081",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "wiki:Taliban",
+        "entity_name": "Taliban"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Kabul",
+        "entity_name": "Kabul"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17380493_frame_0",
+    "document_id": "DW_17380493",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:World_Economic_Forum",
+        "entity_name": "World Economic Forum"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Davos",
+        "entity_name": "Davos"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17419001_frame_0",
+    "document_id": "DW_17419001",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17443501_frame_0",
+    "document_id": "DW_17443501",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Barack_Obama",
+        "entity_name": "Barack Obama"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Enrique_Peña_Nieto",
+        "entity_name": "Enrique Pena Nieto"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Stephen_Harper",
+        "entity_name": "Stephen Harper"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Toluca",
+        "entity_name": "Toluca"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17455727_frame_0",
+    "document_id": "DW_17455727",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1746978_frame_0",
+    "document_id": "DW_1746978",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17472158_frame_0",
+    "document_id": "DW_17472158",
+    "frame_type": "convict",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Hamas",
+        "entity_name": "Hamas"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Egypt",
+        "entity_name": "Egypt"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_17472158:concept:9",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17480574_frame_0",
+    "document_id": "DW_17480574",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:European_People's_Party",
+        "entity_name": "European People's Party"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17506161_frame_0",
+    "document_id": "DW_17506161",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "wiki:Israel",
+        "entity_name": "Israel"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Golan_Heights",
+        "entity_name": "Golan Heights"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17522845_frame_0",
+    "document_id": "DW_17522845",
+    "frame_type": "cpn-accident",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17564729_frame_0",
+    "document_id": "DW_17564729",
+    "frame_type": "cpn-accident",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17592745_frame_0",
+    "document_id": "DW_17592745",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Tito_Vilanova",
+        "entity_name": "Tito Vilanova"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17615986_frame_0",
+    "document_id": "DW_17615986",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Ban_Ki-moon",
+        "entity_name": "Ban Ki-moon"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:South_Sudan",
+        "entity_name": "South Sudan"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17633753_frame_0",
+    "document_id": "DW_17633753",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Vietnam",
+        "entity_name": "Vietnam"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17660721_frame_0",
+    "document_id": "DW_17660721",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "wiki:Al-Shabaab_(militant_group)",
+        "entity_name": "al-Shabab"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_17660721:concept:11",
+        "entity_name": "Saturday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Mogadishu",
+        "entity_name": "Mogadishu"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17661827_frame_0",
+    "document_id": "DW_17661827",
+    "frame_type": "elect",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Petro_Poroshenko",
+        "entity_name": "Petro Poroshenko"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Ukraine",
+        "entity_name": "Ukraine"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17678056_frame_0",
+    "document_id": "DW_17678056",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "awardee",
+        "entity_id": "wiki:Mustafa_Dzhemilev",
+        "entity_name": "Mustafa Dzhemilev"
+      },
+      {
+        "role": "award",
+        "entity_id": "wiki:Solidarity_Prize",
+        "entity_name": "Solidarity Award"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17680344_frame_0",
+    "document_id": "DW_17680344",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17759775_frame_0",
+    "document_id": "DW_17759775",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Anders_Fogh_Rasmussen",
+        "entity_name": "Anders Fogh Rasmussen"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17786779_frame_0",
+    "document_id": "DW_17786779",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Afghanistan",
+        "entity_name": "Afghanistan"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_17786779:concept:5",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17797401_frame_0",
+    "document_id": "DW_17797401",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:John_Kerry",
+        "entity_name": "John Kerry"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Cairo",
+        "entity_name": "Cairo"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17822547_frame_0",
+    "document_id": "DW_17822547",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1784954_frame_0",
+    "document_id": "DW_1784954",
+    "frame_type": "sentence",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "doc:DW_1784954:concept:0",
+        "entity_name": "Herish Ali Abdullah"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17885633_frame_0",
+    "document_id": "DW_17885633",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17890695_frame_0",
+    "document_id": "DW_17890695",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Donald_Tusk",
+        "entity_name": "Donald Tusk"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:European_Union",
+        "entity_name": "European"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17890695_frame_1",
+    "document_id": "DW_17890695",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Federica_Mogherini",
+        "entity_name": "Federica Mogherini"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:European_Union",
+        "entity_name": "European"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17909180_frame_0",
+    "document_id": "DW_17909180",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Abdullah_Abdullah",
+        "entity_name": "Abdullah Abdullah"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Afghanistan",
+        "entity_name": "Afghanistan"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_17998137_frame_0",
+    "document_id": "DW_17998137",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18011832_frame_0",
+    "document_id": "DW_18011832",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Mahinda_Rajapaksa",
+        "entity_name": "Mahinda Rajapaksa"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Sri_Lanka",
+        "entity_name": "Sri Lanka"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18011832:concept:9",
+        "entity_name": "January"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18024306_frame_0",
+    "document_id": "DW_18024306",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Ukraine",
+        "entity_name": "Ukraine"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18024306:concept:6",
+        "entity_name": "Sunday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18082163_frame_0",
+    "document_id": "DW_18082163",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18106607_frame_0",
+    "document_id": "DW_18106607",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Bhopal",
+        "entity_name": "Bhopal"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18117338_frame_0",
+    "document_id": "DW_18117338",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Pegida",
+        "entity_name": "Patriotic Europeans against the Islamization of the West"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Dresden",
+        "entity_name": "Dresden"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Düsseldorf",
+        "entity_name": "Düsseldorf"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18117338:concept:6",
+        "entity_name": "Monday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18126319_frame_0",
+    "document_id": "DW_18126319",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18138175_frame_0",
+    "document_id": "DW_18138175",
+    "frame_type": "sentence",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Nigeria",
+        "entity_name": "Nigeria"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18138175:concept:7",
+        "entity_name": "Wednesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18150880_frame_0",
+    "document_id": "DW_18150880",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Nicaragua",
+        "entity_name": "Nicaragua"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18153763_frame_0",
+    "document_id": "DW_18153763",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Mikhail_Myasnikovich",
+        "entity_name": "Mikhail Myasnikovich"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18163305_frame_0",
+    "document_id": "DW_18163305",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "wiki:Boko_Haram",
+        "entity_name": "Boko Haram"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Cameroon",
+        "entity_name": "Cameroon"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18165780_frame_0",
+    "document_id": "DW_18165780",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Giorgio_Napolitano",
+        "entity_name": "Giorgio Napolitano"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Italy",
+        "entity_name": "Italy"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_18165780:concept:5",
+        "entity_name": "president"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18165785_frame_0",
+    "document_id": "DW_18165785",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Helmand_Province",
+        "entity_name": "Helmand"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18168878_frame_0",
+    "document_id": "DW_18168878",
+    "frame_type": "cpn-accident",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18172053_frame_0",
+    "document_id": "DW_18172053",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Cologne",
+        "entity_name": "Cologne"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18195588_frame_0",
+    "document_id": "DW_18195588",
+    "frame_type": "arrest-jail",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Paris",
+        "entity_name": "Paris"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18195588_frame_1",
+    "document_id": "DW_18195588",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:John_Kerry",
+        "entity_name": "John Kerry"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Paris",
+        "entity_name": "Paris"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18199164_frame_0",
+    "document_id": "DW_18199164",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Pegida",
+        "entity_name": "Patriotic Europeans Against the Islamization of the West"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Dresden",
+        "entity_name": "Dresden"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18200543_frame_0",
+    "document_id": "DW_18200543",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18216111_frame_0",
+    "document_id": "DW_18216111",
+    "frame_type": "convict",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Jeffrey_Alexander_Sterling",
+        "entity_name": "Jeffrey Sterling"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:United_States",
+        "entity_name": "United States"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18216938_frame_0",
+    "document_id": "DW_18216938",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "award",
+        "entity_id": "wiki:Golden_Bear",
+        "entity_name": "Golden Bear"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18220142_frame_0",
+    "document_id": "DW_18220142",
+    "frame_type": "execute",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Warren_Hill_(prisoner)",
+        "entity_name": "Warren Hill"
+      },
+      {
+        "role": "agent",
+        "entity_id": "wiki:United_States",
+        "entity_name": "US"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Georgia_(U.S._state)",
+        "entity_name": "Georgia"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18221520_frame_0",
+    "document_id": "DW_18221520",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Alexander_Litvinenko",
+        "entity_name": "Alexander Litvinenko"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18221520:concept:9",
+        "entity_name": "November 23, 2006"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:United_Kingdom",
+        "entity_name": "Britain"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18241993_frame_0",
+    "document_id": "DW_18241993",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "target",
+        "entity_id": "wiki:Kayla_Mueller",
+        "entity_name": "Kayla Jean Mueller"
+      },
+      {
+        "role": "attacker",
+        "entity_id": "wiki:Islamic_State_of_Iraq_and_the_Levant",
+        "entity_name": "Islamic State"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18246884_frame_0",
+    "document_id": "DW_18246884",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Pegida",
+        "entity_name": "PEGIDA"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Malmö",
+        "entity_name": "Malmo"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18250848_frame_0",
+    "document_id": "DW_18250848",
+    "frame_type": "arrest-jail",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "doc:DW_18250848:concept:5",
+        "entity_name": "Omar Al-Kutobi"
+      },
+      {
+        "role": "person",
+        "entity_id": "doc:DW_18250848:concept:6",
+        "entity_name": "Mohammad Kiad"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Australia",
+        "entity_name": "Australia"
+      },
+      {
+        "role": "place",
+        "entity_id": "doc:DW_18250848:concept:8",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18263552_frame_0",
+    "document_id": "DW_18263552",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Haiti",
+        "entity_name": "Haiti"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18263552:concept:4",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18277911_frame_0",
+    "document_id": "DW_18277911",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:South_Korea",
+        "entity_name": "South Korea"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18277911_frame_1",
+    "document_id": "DW_18277911",
+    "frame_type": "die",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18315874_frame_0",
+    "document_id": "DW_18315874",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Lincang",
+        "entity_name": "Lincang"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18324810_frame_0",
+    "document_id": "DW_18324810",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18341349_frame_0",
+    "document_id": "DW_18341349",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:French_Alps",
+        "entity_name": "French Alps"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18341368_frame_0",
+    "document_id": "DW_18341368",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:French_Alps",
+        "entity_name": "French Alps"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18341368:concept:8",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18344681_frame_0",
+    "document_id": "DW_18344681",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18352289_frame_0",
+    "document_id": "DW_18352289",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Muhammadu_Buhari",
+        "entity_name": "Muhammadu Buhari"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Nigeria",
+        "entity_name": "Nigeria"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18352289:concept:4",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18352289_frame_1",
+    "document_id": "DW_18352289",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "doc:DW_18352289:concept:3",
+        "entity_name": "Manji Cheto"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "DW"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18361149_frame_0",
+    "document_id": "DW_18361149",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Russia",
+        "entity_name": "Russia"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Yemen",
+        "entity_name": "Yemen"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18377297_frame_0",
+    "document_id": "DW_18377297",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Angela_Merkel",
+        "entity_name": "Angela Merkel"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Narendra_Modi",
+        "entity_name": "Narendra Modi"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Hanover",
+        "entity_name": "Hanover"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18378635_frame_0",
+    "document_id": "DW_18378635",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Chibok",
+        "entity_name": "Chibok"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18391860_frame_0",
+    "document_id": "DW_18391860",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:Lewis_Hamilton",
+        "entity_name": "Lewis Hamilton"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:Bahrain_Grand_Prix",
+        "entity_name": "Bahrain Grand Prix"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18407585_frame_0",
+    "document_id": "DW_18407585",
+    "frame_type": "release-parole",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Omar_Khadr",
+        "entity_name": "Nate Whitling"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18407585:concept:10",
+        "entity_name": "May 5"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18430907_frame_0",
+    "document_id": "DW_18430907",
+    "frame_type": "cpn-accident",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18445104_frame_0",
+    "document_id": "DW_18445104",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Nicos_Anastasiades",
+        "entity_name": "Nicos Anastasiades"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Mustafa_Akıncı",
+        "entity_name": "Mustafa Akinci"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18475636_frame_0",
+    "document_id": "DW_18475636",
+    "frame_type": "merge-org",
+    "slots": [
+      {
+        "role": "org",
+        "entity_id": "wiki:Cheil_Industries",
+        "entity_name": "Cheil"
+      },
+      {
+        "role": "org",
+        "entity_id": "wiki:Samsung_C&T_Corporation",
+        "entity_name": "C&T"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18475636:concept:8",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18491284_frame_0",
+    "document_id": "DW_18491284",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Toby_Lanzer",
+        "entity_name": "Toby Lanzer"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:South_Sudan",
+        "entity_name": "South Sudan"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18571849_frame_0",
+    "document_id": "DW_18571849",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "doc:DW_18571849:concept:2",
+        "entity_name": "Jürgen Neyer"
+      },
+      {
+        "role": "interviewer",
+        "entity_id": "doc:DW_18571849:concept:23",
+        "entity_name": "Andreas Gorzewski"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "DW"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18580733_frame_0",
+    "document_id": "DW_18580733",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18605368_frame_0",
+    "document_id": "DW_18605368",
+    "frame_type": "charge-indict",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Thailand",
+        "entity_name": "Thailand"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18617314_frame_0",
+    "document_id": "DW_18617314",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Jim_Gilmore",
+        "entity_name": "Jim Gilmore"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:United_States",
+        "entity_name": "US"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18617314:concept:7",
+        "entity_name": "Wednesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18631050_frame_0",
+    "document_id": "DW_18631050",
+    "frame_type": "transfer-ownership",
+    "slots": [
+      {
+        "role": "buyer",
+        "entity_id": "wiki:Adidas",
+        "entity_name": "Adidas"
+      },
+      {
+        "role": "artifact",
+        "entity_id": "wiki:Runtastic",
+        "entity_name": "Runtastic"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18710352_frame_0",
+    "document_id": "DW_18710352",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Spain",
+        "entity_name": "Spain"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18721009_frame_0",
+    "document_id": "DW_18721009",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "doc:DW_18721009:concept:1",
+        "entity_name": "Islamist"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18721009:concept:5",
+        "entity_name": "Thursday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Berlin",
+        "entity_name": "Berlin"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18721009_frame_1",
+    "document_id": "DW_18721009",
+    "frame_type": "attack",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18742747_frame_0",
+    "document_id": "DW_18742747",
+    "frame_type": "charge-indict",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Neymar",
+        "entity_name": "Neymar"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Brazil",
+        "entity_name": "Brazil"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18787620_frame_0",
+    "document_id": "DW_18787620",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18787620_frame_1",
+    "document_id": "DW_18787620",
+    "frame_type": "transfer-money",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18792245_frame_0",
+    "document_id": "DW_18792245",
+    "frame_type": "elect",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Justin_Trudeau",
+        "entity_name": "Justin Trudeau"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Canada",
+        "entity_name": "Canada"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18792245_frame_1",
+    "document_id": "DW_18792245",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Stephen_Harper",
+        "entity_name": "Stephen Harper"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Conservative_Party_of_Canada",
+        "entity_name": "Conservative Party"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18792245:concept:8",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18793588_frame_0",
+    "document_id": "DW_18793588",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Ban_Ki-moon",
+        "entity_name": "Ban Ki-moon"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Reuven_Rivlin",
+        "entity_name": "Reuven Rivlin"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Jerusalem",
+        "entity_name": "Jerusalem"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18793588:concept:11",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18804644_frame_0",
+    "document_id": "DW_18804644",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Cologne",
+        "entity_name": "Cologne"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18856622_frame_1",
+    "document_id": "DW_18856622",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Paris",
+        "entity_name": "Paris"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18880484_frame_0",
+    "document_id": "DW_18880484",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "wiki:Turkey",
+        "entity_name": "Turkey"
+      },
+      {
+        "role": "target",
+        "entity_id": "wiki:Russia",
+        "entity_name": "Russia"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18881687_frame_0",
+    "document_id": "DW_18881687",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Tahir_Elçi",
+        "entity_name": "Tahir Elci"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Diyarbakır",
+        "entity_name": "Diyarbakir"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18881687:concept:8",
+        "entity_name": "Saturday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18881687_frame_1",
+    "document_id": "DW_18881687",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "target",
+        "entity_id": "wiki:Tahir_Elçi",
+        "entity_name": "Tahir Elci"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18900378_frame_0",
+    "document_id": "DW_18900378",
+    "frame_type": "charge-indict",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:wikidata:Q21697311",
+        "entity_name": "Muhaydin Mire"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:London",
+        "entity_name": "London"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18900378:concept:6",
+        "entity_name": "Saturday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18911950_frame_0",
+    "document_id": "DW_18911950",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:Borussia_Mönchengladbach",
+        "entity_name": "Borussia Mönchengladbach"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:FC_Bayern_Munich",
+        "entity_name": "Bayern Munich"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:Bundesliga",
+        "entity_name": "Bundesliga"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18914372_frame_0",
+    "document_id": "DW_18914372",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18918700_frame_0",
+    "document_id": "DW_18918700",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "target",
+        "entity_id": "wiki:Shia_Islam",
+        "entity_name": "Shiite Muslims"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18926138_frame_0",
+    "document_id": "DW_18926138",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "wiki:Turkey",
+        "entity_name": "Turkey"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18934765_frame_0",
+    "document_id": "DW_18934765",
+    "frame_type": "release-parole",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Uli_Hoeneß",
+        "entity_name": "Uli Hoeness"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Augsburg",
+        "entity_name": "Augsburg"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_18934765:concept:5",
+        "entity_name": "March"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1893542_frame_0",
+    "document_id": "DW_1893542",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18995809_frame_0",
+    "document_id": "DW_18995809",
+    "frame_type": "nominate",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Christine_Lagarde",
+        "entity_name": "Christine Lagarde"
+      },
+      {
+        "role": "agent",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      },
+      {
+        "role": "agent",
+        "entity_id": "wiki:United_Kingdom",
+        "entity_name": "Great Britain"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:International_Monetary_Fund",
+        "entity_name": "International Monetary Fund"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_18996219_frame_0",
+    "document_id": "DW_18996219",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19002777_frame_0",
+    "document_id": "DW_19002777",
+    "frame_type": "start-org",
+    "slots": [
+      {
+        "role": "org",
+        "entity_id": "wiki:wikidata:Q23128082",
+        "entity_name": "European Counter Terrorism Centre"
+      },
+      {
+        "role": "agent",
+        "entity_id": "wiki:Europol",
+        "entity_name": "Europol"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:The_Hague",
+        "entity_name": "The Hague"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19008716_frame_0",
+    "document_id": "DW_19008716",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:Serena_Williams",
+        "entity_name": "Serena Williams"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:Agnieszka_Radwańska",
+        "entity_name": "Agnieszka Radwanska"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:Australian_Open",
+        "entity_name": "Australian Open"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19027228_frame_0",
+    "document_id": "DW_19027228",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19041523_frame_0",
+    "document_id": "DW_19041523",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19045900_frame_0",
+    "document_id": "DW_19045900",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Pope_Francis",
+        "entity_name": "Francis"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Mexico",
+        "entity_name": "Mexico"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19047438_frame_0",
+    "document_id": "DW_19047438",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Antonin_Scalia",
+        "entity_name": "Antonin Scalia"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Texas",
+        "entity_name": "Texas"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19060400_frame_0",
+    "document_id": "DW_19060400",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19061770_frame_0",
+    "document_id": "DW_19061770",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Evo_Morales",
+        "entity_name": "Evo Morales"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Bolivia",
+        "entity_name": "Bolivia"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19078542_frame_0",
+    "document_id": "DW_19078542",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Mogadishu",
+        "entity_name": "Mogadishu"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19078542:concept:5",
+        "entity_name": "Friday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19097780_frame_0",
+    "document_id": "DW_19097780",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Martin_Zielke",
+        "entity_name": "Martin Zielke"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Commerzbank",
+        "entity_name": "Commerzbank"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_19097780:concept:4",
+        "entity_name": "CEO"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19097780:concept:5",
+        "entity_name": "May 1"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19120622_frame_0",
+    "document_id": "DW_19120622",
+    "frame_type": "nominate",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Merrick_Garland",
+        "entity_name": "Merrick Garland"
+      },
+      {
+        "role": "agent",
+        "entity_id": "wiki:Barack_Obama",
+        "entity_name": "Barack Obama"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:United_States",
+        "entity_name": "US"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19130715_frame_0",
+    "document_id": "DW_19130715",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "doc:DW_19130715:concept:0",
+        "entity_name": "Elmer Funke Kupper"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_19130715:concept:6",
+        "entity_name": "CEO"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Australian_Securities_Exchange",
+        "entity_name": "Australian Securities Exchange"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19130715:concept:5",
+        "entity_name": "Monday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Australia",
+        "entity_name": "Australia"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19132652_frame_0",
+    "document_id": "DW_19132652",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19133985_frame_0",
+    "document_id": "DW_19133985",
+    "frame_type": "sentence",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Nadiya_Savchenko",
+        "entity_name": "Nadezhda Savchenko"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19156615_frame_0",
+    "document_id": "DW_19156615",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Kolkata",
+        "entity_name": "Kolkata"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19165552_frame_0",
+    "document_id": "DW_19165552",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "doc:DW_19165552:concept:1",
+        "entity_name": "Benjamin Julian"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "DW"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19179138_frame_0",
+    "document_id": "DW_19179138",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Barack_Obama",
+        "entity_name": "Barack Obama"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19185145_frame_0",
+    "document_id": "DW_19185145",
+    "frame_type": "charge-indict",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Niels_Högel",
+        "entity_name": "Niels H."
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19189377_frame_0",
+    "document_id": "DW_19189377",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Volodymyr_Groysman",
+        "entity_name": "Volodymyr Groysman"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Ukraine",
+        "entity_name": "Ukraine"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19193488_frame_0",
+    "document_id": "DW_19193488",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:FC_Bayern_Munich",
+        "entity_name": "Bayern Munich"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:FC_Schalke_04",
+        "entity_name": "Royal Blues"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:Bundesliga",
+        "entity_name": "Bundesliga"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19200253_frame_0",
+    "document_id": "DW_19200253",
+    "frame_type": "start-org",
+    "slots": [
+      {
+        "role": "org",
+        "entity_id": "wiki:Hublot",
+        "entity_name": "Hublot"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Manhattan",
+        "entity_name": "Manhattan"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19210651_frame_0",
+    "document_id": "DW_19210651",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Klaus_Staeck",
+        "entity_name": "Klaus Staeck"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19240600_frame_0",
+    "document_id": "DW_19240600",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Ahmet_Davutoğlu",
+        "entity_name": "Ahmet Davutoglu"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_19240600:concept:10",
+        "entity_name": "Prime Minister"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Turkey",
+        "entity_name": "Turkey"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Turkey",
+        "entity_name": "Turkey"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19247260_frame_0",
+    "document_id": "DW_19247260",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Rodrigo_Duterte",
+        "entity_name": "Rodrigo Duterte"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Philippines",
+        "entity_name": "Philippines"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19276257_frame_0",
+    "document_id": "DW_19276257",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19276257_frame_1",
+    "document_id": "DW_19276257",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Akhtar_Mansour",
+        "entity_name": "Mullah Akhtar Mansour"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19276257_frame_2",
+    "document_id": "DW_19276257",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "target",
+        "entity_id": "wiki:Akhtar_Mansour",
+        "entity_name": "Mullah Akhtar Mansour"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19276257:concept:7",
+        "entity_name": "Sunday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19276653_frame_0",
+    "document_id": "DW_19276653",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19280392_frame_0",
+    "document_id": "DW_19280392",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Mediterranean_Sea",
+        "entity_name": "Mediterranean Sea"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19290532_frame_0",
+    "document_id": "DW_19290532",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Hillary_Clinton",
+        "entity_name": "Hillary Clinton"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:United_States",
+        "entity_name": "United States"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19309151_frame_0",
+    "document_id": "DW_19309151",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Narendra_Modi",
+        "entity_name": "Narendra Modi"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Washington,_D.C.",
+        "entity_name": "Washington"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19309151:concept:12",
+        "entity_name": "June 7-8"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19310136_frame_0",
+    "document_id": "DW_19310136",
+    "frame_type": "transfer-ownership",
+    "slots": [
+      {
+        "role": "buyer",
+        "entity_id": "wiki:wikidata:Q25388087",
+        "entity_name": "Shanghai Yigian Trading Company"
+      },
+      {
+        "role": "artifact",
+        "entity_id": "wiki:Frankfurt–Hahn_Airport",
+        "entity_name": "Frankfurt's Hahn Airport"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19337177_frame_0",
+    "document_id": "DW_19337177",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "award",
+        "entity_id": "wiki:Ibrahim_Prize",
+        "entity_name": "Prize for Achievement in African Leadership"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19337795_frame_0",
+    "document_id": "DW_19337795",
+    "frame_type": "sentence",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:India",
+        "entity_name": "India"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19337795:concept:7",
+        "entity_name": "Friday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19341217_frame_0",
+    "document_id": "DW_19341217",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Jo_Cox",
+        "entity_name": "Jo Cox"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19341217:concept:14",
+        "entity_name": "Thursday"
+      },
+      {
+        "role": "agent",
+        "entity_id": "wiki:wikidata:Q24661955",
+        "entity_name": "Thomas Mair"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19369328_frame_0",
+    "document_id": "DW_19369328",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Washington,_D.C.",
+        "entity_name": "Washington, D.C."
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19371971_frame_0",
+    "document_id": "DW_19371971",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Christine_Lagarde",
+        "entity_name": "Christine Lagarde"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19371971:concept:9",
+        "entity_name": "July 22"
+      },
+      {
+        "role": "adjudicator",
+        "entity_id": "wiki:Court_of_Cassation_(France)",
+        "entity_name": "Supreme Court"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19385445_frame_0",
+    "document_id": "DW_19385445",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Henrikh_Mkhitaryan",
+        "entity_name": "Henrikh Mkhitaryan"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Borussia_Dortmund",
+        "entity_name": "Borussia Dortmund"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Borussia_Dortmund",
+        "entity_name": "Borussia Dortmund"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19385445_frame_1",
+    "document_id": "DW_19385445",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Henrikh_Mkhitaryan",
+        "entity_name": "Henrikh Mkhitaryan"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Manchester_United_F.C.",
+        "entity_name": "Manchester United"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19398156_frame_0",
+    "document_id": "DW_19398156",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Bernardo_Provenzano",
+        "entity_name": "Bernardo Provenzano"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Milan",
+        "entity_name": "Milan"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19427990_frame_0",
+    "document_id": "DW_19427990",
+    "frame_type": "acquit",
+    "slots": [
+      {
+        "role": "adjudicator",
+        "entity_id": "wiki:International_Olympic_Committee",
+        "entity_name": "IOC"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19431855_frame_0",
+    "document_id": "DW_19431855",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19431855_frame_1",
+    "document_id": "DW_19431855",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "doc:DW_19431855:concept:14",
+        "entity_name": "Ali David S."
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Munich",
+        "entity_name": "Munich"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19431855:concept:12",
+        "entity_name": "July 22"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19431855_frame_2",
+    "document_id": "DW_19431855",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "doc:DW_19431855:concept:0",
+        "entity_name": "Tim K."
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Winnenden",
+        "entity_name": "Winnenden"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19438601_frame_0",
+    "document_id": "DW_19438601",
+    "frame_type": "arrest-jail",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "doc:DW_19438601:concept:0",
+        "entity_name": "Nourredine H."
+      },
+      {
+        "role": "person",
+        "entity_id": "doc:DW_19438601:concept:2",
+        "entity_name": "Hamza H."
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19438601:concept:4",
+        "entity_name": "Saturday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19440122_frame_0",
+    "document_id": "DW_19440122",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Saint-Étienne-du-Rouvray",
+        "entity_name": "Saint-Etienne-du-Rouvray"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19447582_frame_0",
+    "document_id": "DW_19447582",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "doc:DW_19447582:concept:1",
+        "entity_name": "Stefan Bratzel"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "Deutsche Welle"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19451648_frame_0",
+    "document_id": "DW_19451648",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "doc:DW_19451648:concept:0",
+        "entity_name": "Samia Shahid"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Pakistan",
+        "entity_name": "Pakistan"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19459527_frame_0",
+    "document_id": "DW_19459527",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19489424_frame_0",
+    "document_id": "DW_19489424",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19491672_frame_0",
+    "document_id": "DW_19491672",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "attacker",
+        "entity_id": "wiki:People's_Protection_Units",
+        "entity_name": "YPG"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Al-Hasakah",
+        "entity_name": "Hasakeh"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19491672:concept:6",
+        "entity_name": "Monday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19497058_frame_0",
+    "document_id": "DW_19497058",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "doc:DW_19497058:concept:2",
+        "entity_name": "Matthias Garschagen"
+      },
+      {
+        "role": "interviewer",
+        "entity_id": "doc:DW_19497058:concept:16",
+        "entity_name": "Anke Rasper"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19502087_frame_0",
+    "document_id": "DW_19502087",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Julian_Weigl",
+        "entity_name": "Julian Weigl"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "DW"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19510523_frame_0",
+    "document_id": "DW_19510523",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19526809_frame_0",
+    "document_id": "DW_19526809",
+    "frame_type": "charge-indict",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Nicolas_Sarkozy",
+        "entity_name": "Nicolas Sarkozy"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Paris",
+        "entity_name": "Paris"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19527398_frame_0",
+    "document_id": "DW_19527398",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "target",
+        "entity_id": "wiki:La_Luz_del_Mundo",
+        "entity_name": "The Light of the World"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Angola",
+        "entity_name": "Angola"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19532542_frame_0",
+    "document_id": "DW_19532542",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Kabul",
+        "entity_name": "Kabul"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_1954143_frame_0",
+    "document_id": "DW_1954143",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "target",
+        "entity_id": "wiki:wikidata:Q28146472",
+        "entity_name": "La Belle"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Berlin",
+        "entity_name": "Berlin"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_1954143:concept:10",
+        "entity_name": "April 5, 1986"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19553683_frame_0",
+    "document_id": "DW_19553683",
+    "frame_type": "cpn-election",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_19566930_frame_0",
+    "document_id": "DW_19566930",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Aleppo",
+        "entity_name": "Aleppo"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_19566930:concept:16",
+        "entity_name": "Monday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2072865_frame_0",
+    "document_id": "DW_2072865",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Group_of_Eight",
+        "entity_name": "Group of Eight"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Moscow",
+        "entity_name": "Moscow"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2236184_frame_0",
+    "document_id": "DW_2236184",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "awardee",
+        "entity_id": "wiki:Sunlight_Foundation",
+        "entity_name": "Sunlight Foundation"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2261157_frame_0",
+    "document_id": "DW_2261157",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2272537_frame_0",
+    "document_id": "DW_2272537",
+    "frame_type": "acquit",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Chemnitz",
+        "entity_name": "Chemnitz"
+      },
+      {
+        "role": "adjudicator",
+        "entity_id": "wiki:Federal_Administrative_Court_(Germany)",
+        "entity_name": "Federal Administration Court"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Leipzig",
+        "entity_name": "Leipzig"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2324413_frame_0",
+    "document_id": "DW_2324413",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2434018_frame_0",
+    "document_id": "DW_2434018",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "doc:DW_2434018:concept:2",
+        "entity_name": "Rohail Aslam"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2517545_frame_0",
+    "document_id": "DW_2517545",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Bremen_(state)",
+        "entity_name": "Bremen"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2583044_frame_0",
+    "document_id": "DW_2583044",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Pope_Benedict_XVI",
+        "entity_name": "Benedict XVI"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:George_W._Bush",
+        "entity_name": "George W. Bush"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Rome",
+        "entity_name": "Rome"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2610524_frame_0",
+    "document_id": "DW_2610524",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Roger_M._Buergel",
+        "entity_name": "Roger M. Buergel"
+      },
+      {
+        "role": "media",
+        "entity_id": "doc:DW_2610524:concept:3",
+        "entity_name": "DW-WORLD.DE"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2677688_frame_0",
+    "document_id": "DW_2677688",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2677688_frame_1",
+    "document_id": "DW_2677688",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "doc:DW_2677688:concept:2",
+        "entity_name": "Johannes F."
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_2763240_frame_0",
+    "document_id": "DW_2763240",
+    "frame_type": "merge-org",
+    "slots": [
+      {
+        "role": "org",
+        "entity_id": "wiki:Suez_(company)",
+        "entity_name": "Suez"
+      },
+      {
+        "role": "org",
+        "entity_id": "wiki:Gaz_de_France",
+        "entity_name": "Gaz de France"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_2763240:concept:11",
+        "entity_name": "Sunday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_3210017_frame_0",
+    "document_id": "DW_3210017",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Yves_Leterme",
+        "entity_name": "Yves Leterme"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Belgium",
+        "entity_name": "Belgium"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_3396779_frame_0",
+    "document_id": "DW_3396779",
+    "frame_type": "start-org",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_3528952_frame_0",
+    "document_id": "DW_3528952",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Radovan_Karadžić",
+        "entity_name": "Radovan Karadzic"
+      },
+      {
+        "role": "adjudicator",
+        "entity_id": "wiki:International_Criminal_Tribunal_for_the_former_Yugoslavia",
+        "entity_name": "International Criminal Tribunal for the Former Yugoslavia"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_3577911_frame_0",
+    "document_id": "DW_3577911",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:Oksana_Chusovitina",
+        "entity_name": "Oksana Chusovitina"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:Olympic_Games",
+        "entity_name": "Olympic Games"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Beijing",
+        "entity_name": "Beijing"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_35885572_frame_0",
+    "document_id": "DW_35885572",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "award",
+        "entity_id": "doc:DW_35885572:concept:0",
+        "entity_name": "Swiss Cheese Awards"
+      },
+      {
+        "role": "awardee",
+        "entity_id": "doc:DW_35885572:concept:3",
+        "entity_name": "Jean-Claude Pittet"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Switzerland",
+        "entity_name": "Switzerland"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_35887302_frame_0",
+    "document_id": "DW_35887302",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:José_Fernández_(pitcher)",
+        "entity_name": "Jose Fernandez"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Miami_Beach,_Florida",
+        "entity_name": "Miami Beach"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_35887302:concept:9",
+        "entity_name": "Sunday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_35913316_frame_0",
+    "document_id": "DW_35913316",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_35913316_frame_1",
+    "document_id": "DW_35913316",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "target",
+        "entity_id": "wiki:Malaysia_Airlines_Flight_17",
+        "entity_name": "MH17"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_35917687_frame_0",
+    "document_id": "DW_35917687",
+    "frame_type": "nominate",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Kristalina_Georgieva",
+        "entity_name": "Kristalina Georgieva"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_35917687:concept:5",
+        "entity_name": "secretary-general"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_35929690_frame_0",
+    "document_id": "DW_35929690",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Shimon_Peres",
+        "entity_name": "Shimon Peres"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36037302_frame_0",
+    "document_id": "DW_36037302",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Bhumibol_Adulyadej",
+        "entity_name": "Bhumibol"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Bangkok",
+        "entity_name": "Bangkok"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_36037302:concept:6",
+        "entity_name": "Thursday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36126804_frame_0",
+    "document_id": "DW_36126804",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "target",
+        "entity_id": "wiki:Sana'a",
+        "entity_name": "Sanaa"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Yemen",
+        "entity_name": "Yemen"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36364923_frame_0",
+    "document_id": "DW_36364923",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "time",
+        "entity_id": "doc:DW_36364923:concept:8",
+        "entity_name": "Friday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Venezuela",
+        "entity_name": "Venezuela"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_3637268_frame_0",
+    "document_id": "DW_3637268",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Paolo_Guerrero",
+        "entity_name": "Paulo Guerrero"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:DW-TV",
+        "entity_name": "DWTV"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36418423_frame_0",
+    "document_id": "DW_36418423",
+    "frame_type": "release-parole",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Pat_Hickey_(sports_administrator)",
+        "entity_name": "Patrick Hickey"
+      },
+      {
+        "role": "entity",
+        "entity_id": "doc:DW_36418423:concept:3",
+        "entity_name": "Juliana Leal de Melo"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Rio_de_Janeiro",
+        "entity_name": "Rio de Janeiro"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36450557_frame_0",
+    "document_id": "DW_36450557",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36457123_frame_0",
+    "document_id": "DW_36457123",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Angela_Merkel",
+        "entity_name": "Angela Merkel"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_36457123:concept:8",
+        "entity_name": "2017"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36563121_frame_0",
+    "document_id": "DW_36563121",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:François_Fillon",
+        "entity_name": "Francois Fillon"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:France",
+        "entity_name": "France"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36615879_frame_0",
+    "document_id": "DW_36615879",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Yahya_Jammeh",
+        "entity_name": "Yahya Jammeh"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_36615879:concept:10",
+        "entity_name": "president"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:The_Gambia",
+        "entity_name": "Gambia"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36623632_frame_0",
+    "document_id": "DW_36623632",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_3674845_frame_0",
+    "document_id": "DW_3674845",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "time",
+        "entity_id": "doc:DW_3674845:concept:11",
+        "entity_name": "Sunday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Bavaria",
+        "entity_name": "Bavaria"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36776267_frame_0",
+    "document_id": "DW_36776267",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Brussels",
+        "entity_name": "Brussels"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_36776267:concept:12",
+        "entity_name": "Thursday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36894330_frame_0",
+    "document_id": "DW_36894330",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Aleppo",
+        "entity_name": "Aleppo"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_36999243_frame_0",
+    "document_id": "DW_36999243",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Dieter_Hecking",
+        "entity_name": "Dieter Hecking"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Borussia_Mönchengladbach",
+        "entity_name": "Borussia Mönchengladbach"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_37121960_frame_0",
+    "document_id": "DW_37121960",
+    "frame_type": "transfer-ownership",
+    "slots": [
+      {
+        "role": "buyer",
+        "entity_id": "wiki:SpiceJet",
+        "entity_name": "Spicejet"
+      },
+      {
+        "role": "seller",
+        "entity_id": "wiki:Boeing",
+        "entity_name": "Boeing"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_37121960:concept:7",
+        "entity_name": "Friday"
+      },
+      {
+        "role": "price",
+        "entity_id": "doc:DW_37121960:concept:8",
+        "entity_name": "$22 billion"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_37205346_frame_1",
+    "document_id": "DW_37205346",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewer",
+        "entity_id": "doc:DW_37205346:concept:7",
+        "entity_name": "Daniel Pelz"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "DW"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_37231645_frame_0",
+    "document_id": "DW_37231645",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Italy",
+        "entity_name": "Italy"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_37234530_frame_0",
+    "document_id": "DW_37234530",
+    "frame_type": "phone-write",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Justin_Trudeau",
+        "entity_name": "Justin Trudeau"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Enrique_Peña_Nieto",
+        "entity_name": "Enrique Pena Nieto"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_37276399_frame_0",
+    "document_id": "DW_37276399",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Matthew_Festing",
+        "entity_name": "Matthew Festing"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Sovereign_Military_Order_of_Malta",
+        "entity_name": "Knights of Malta"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_37276399:concept:8",
+        "entity_name": "Grand Master"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_37351636_frame_0",
+    "document_id": "DW_37351636",
+    "frame_type": "transfer-ownership",
+    "slots": [
+      {
+        "role": "seller",
+        "entity_id": "wiki:Royal_Dutch_Shell",
+        "entity_name": "Royal Dutch Shell"
+      },
+      {
+        "role": "buyer",
+        "entity_id": "doc:DW_37351636:concept:1",
+        "entity_name": "Chrysaor"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_37448142_frame_0",
+    "document_id": "DW_37448142",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Toby_Lanzer",
+        "entity_name": "Toby Lanzer"
+      },
+      {
+        "role": "interviewer",
+        "entity_id": "doc:DW_37448142:concept:32",
+        "entity_name": "Daniel Pelz"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "DW"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_38223040_frame_0",
+    "document_id": "DW_38223040",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Pravin_Gordhan",
+        "entity_name": "Pravin Gordhan"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_38223040:concept:6",
+        "entity_name": "finance minister"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:South_Africa",
+        "entity_name": "South Africa"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_38300558_frame_0",
+    "document_id": "DW_38300558",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:France",
+        "entity_name": "France"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_38448190_frame_0",
+    "document_id": "DW_38448190",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Syria",
+        "entity_name": "Syria"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_38448190:concept:4",
+        "entity_name": "Saturday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_38448190_frame_1",
+    "document_id": "DW_38448190",
+    "frame_type": "die",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_38525676_frame_0",
+    "document_id": "DW_38525676",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:AFC_Ajax",
+        "entity_name": "Ajax"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:FC_Schalke_04",
+        "entity_name": "Schalke"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:UEFA_Europa_League",
+        "entity_name": "Europa League"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_3873159_frame_0",
+    "document_id": "DW_3873159",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "awardee",
+        "entity_id": "wiki:Amos_Oz",
+        "entity_name": "Amos Oz"
+      },
+      {
+        "role": "award",
+        "entity_id": "wiki:Heinrich_Heine_Prize",
+        "entity_name": "German Literary Prize"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Düsseldorf",
+        "entity_name": "Dusseldorf"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_3873159:concept:6",
+        "entity_name": "Saturday, Dec. 13"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_38779847_frame_0",
+    "document_id": "DW_38779847",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_38808612_frame_0",
+    "document_id": "DW_38808612",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "doc:DW_38808612:concept:0",
+        "entity_name": "Miriam Rodriguez"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:San_Fernando,_Tamaulipas",
+        "entity_name": "San Fernando"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_38808612:concept:8",
+        "entity_name": "Wednesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_38965429_frame_0",
+    "document_id": "DW_38965429",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Manchester_Arena",
+        "entity_name": "Manchester Arena"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_38968522_frame_0",
+    "document_id": "DW_38968522",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Elham_Manea",
+        "entity_name": "Elham Manea"
+      },
+      {
+        "role": "interviewer",
+        "entity_id": "doc:DW_38968522:concept:25",
+        "entity_name": "Matthias von Hein"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "DW"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39204339_frame_0",
+    "document_id": "DW_39204339",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "awardee",
+        "entity_id": "wiki:Dear_Evan_Hansen",
+        "entity_name": "Dear Evan Hansen"
+      },
+      {
+        "role": "award",
+        "entity_id": "wiki:Tony_Award",
+        "entity_name": "Tony Awards"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39209569_frame_0",
+    "document_id": "DW_39209569",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "time",
+        "entity_id": "doc:DW_39209569:concept:5",
+        "entity_name": "June 7"
+      },
+      {
+        "role": "place",
+        "entity_id": "doc:DW_39209569:concept:6",
+        "entity_name": "Oarai Research and Development Center"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39319961_frame_0",
+    "document_id": "DW_39319961",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Édouard_Philippe",
+        "entity_name": "Edouard Philippe"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_39319961:concept:5",
+        "entity_name": "Prime Minister"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:France",
+        "entity_name": "France"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39328894_frame_0",
+    "document_id": "DW_39328894",
+    "frame_type": "sentence",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "doc:DW_39328894:concept:0",
+        "entity_name": "Ismet S."
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39328894_frame_1",
+    "document_id": "DW_39328894",
+    "frame_type": "convict",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39564901_frame_0",
+    "document_id": "DW_39564901",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:John_F._Kelly",
+        "entity_name": "John Kelly"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Enrique_Peña_Nieto",
+        "entity_name": "Enrique Pena Nieto"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Mexico_City",
+        "entity_name": "Mexico City"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_39564901:concept:9",
+        "entity_name": "Wednesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39564901_frame_1",
+    "document_id": "DW_39564901",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Mexico",
+        "entity_name": "Mexico"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39632546_frame_0",
+    "document_id": "DW_39632546",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39806125_frame_0",
+    "document_id": "DW_39806125",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Angela_Merkel",
+        "entity_name": "Angela Merkel"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39899521_frame_0",
+    "document_id": "DW_39899521",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39957884_frame_0",
+    "document_id": "DW_39957884",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39957884_frame_1",
+    "document_id": "DW_39957884",
+    "frame_type": "sentence",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Oscar_Pistorius",
+        "entity_name": "Oscar Pistorius"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_39957884_frame_2",
+    "document_id": "DW_39957884",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Reeva_Steenkamp",
+        "entity_name": "Reeva Steenkamp"
+      },
+      {
+        "role": "agent",
+        "entity_id": "wiki:Oscar_Pistorius",
+        "entity_name": "Oscar Pistorius"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4011571_frame_0",
+    "document_id": "DW_4011571",
+    "frame_type": "phone-write",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Angela_Merkel",
+        "entity_name": "Merkel"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Pope_Benedict_XVI",
+        "entity_name": "Joseph Ratzinger"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_40160189_frame_0",
+    "document_id": "DW_40160189",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Uttar_Pradesh",
+        "entity_name": "Uttar Pradesh"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_40160189:concept:3",
+        "entity_name": "Saturday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_40232303_frame_0",
+    "document_id": "DW_40232303",
+    "frame_type": "sentence",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Lee_Jae-yong_(businessman)",
+        "entity_name": "Lee Jae-yong"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_40663341_frame_0",
+    "document_id": "DW_40663341",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "time",
+        "entity_id": "doc:DW_40663341:concept:9",
+        "entity_name": "Sunday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4099423_frame_0",
+    "document_id": "DW_4099423",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Afghanistan",
+        "entity_name": "Afghanistan"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41164310_frame_0",
+    "document_id": "DW_41164310",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41323219_frame_0",
+    "document_id": "DW_41323219",
+    "frame_type": "charge-indict",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Roy_Moore",
+        "entity_name": "Roy Moore"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41323219_frame_1",
+    "document_id": "DW_41323219",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Roy_Moore",
+        "entity_name": "Roy Moore"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_41323219:concept:9",
+        "entity_name": "Attorney General"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41367902_frame_0",
+    "document_id": "DW_41367902",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41367902_frame_1",
+    "document_id": "DW_41367902",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Venezuela",
+        "entity_name": "Venezuela"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4137504_frame_0",
+    "document_id": "DW_4137504",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:United_Nations",
+        "entity_name": "United Nations"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Bonn",
+        "entity_name": "Bonn"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41447661_frame_0",
+    "document_id": "DW_41447661",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Charles_Manson",
+        "entity_name": "Charles Manson"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Kern_County,_California",
+        "entity_name": "Kern County"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41514029_frame_0",
+    "document_id": "DW_41514029",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41544842_frame_0",
+    "document_id": "DW_41544842",
+    "frame_type": "marry",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Prince_Harry,_Duke_of_Sussex",
+        "entity_name": "Harry"
+      },
+      {
+        "role": "person",
+        "entity_id": "wiki:Meghan,_Duchess_of_Sussex",
+        "entity_name": "Meghan Markle"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41650973_frame_0",
+    "document_id": "DW_41650973",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41763796_frame_0",
+    "document_id": "DW_41763796",
+    "frame_type": "charge-indict",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "doc:DW_41763796:concept:3",
+        "entity_name": "Akayed Ullah"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:New_York_City",
+        "entity_name": "New York City"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_41763796:concept:7",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4188904_frame_0",
+    "document_id": "DW_4188904",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_4188904:concept:6",
+        "entity_name": "September"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41920915_frame_0",
+    "document_id": "DW_41920915",
+    "frame_type": "release-parole",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Alberto_Fujimori",
+        "entity_name": "Alberto Fujimori"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Pedro_Pablo_Kuczynski",
+        "entity_name": "Pedro Pablo Kuczynski"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Peru",
+        "entity_name": "Peru"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_41920915:concept:8",
+        "entity_name": "Sunday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_41943844_frame_0",
+    "document_id": "DW_41943844",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Barack_Obama",
+        "entity_name": "Barack Obama"
+      },
+      {
+        "role": "interviewer",
+        "entity_id": "wiki:Prince_Harry,_Duke_of_Sussex",
+        "entity_name": "Harry"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:BBC",
+        "entity_name": "BBC"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_42405092_frame_0",
+    "document_id": "DW_42405092",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Morgan_Tsvangirai",
+        "entity_name": "Morgan Tsvangirai"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_42405092:concept:9",
+        "entity_name": "Wednesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4246722_frame_0",
+    "document_id": "DW_4246722",
+    "frame_type": "transfer-ownership",
+    "slots": [
+      {
+        "role": "buyer",
+        "entity_id": "wiki:Lufthansa",
+        "entity_name": "Lufthansa"
+      },
+      {
+        "role": "artifact",
+        "entity_id": "wiki:Austrian_Airlines",
+        "entity_name": "Austrian Airlines"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_42761628_frame_0",
+    "document_id": "DW_42761628",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Max_Meyer_(footballer)",
+        "entity_name": "Max Meyer"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:FC_Schalke_04",
+        "entity_name": "Schalke XI"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_42811821_frame_0",
+    "document_id": "DW_42811821",
+    "frame_type": "charge-indict",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Angelo_Caloia",
+        "entity_name": "Angelo Caloia"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Vatican",
+        "entity_name": "Vatican"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_42819769_frame_0",
+    "document_id": "DW_42819769",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:Davide_Astori",
+        "entity_name": "Davide Astori"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Udine",
+        "entity_name": "Udine"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_42819769:concept:7",
+        "entity_name": "Sunday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_43017241_frame_0",
+    "document_id": "DW_43017241",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:VfB_Stuttgart",
+        "entity_name": "Stuttgart"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:SC_Freiburg",
+        "entity_name": "Freiburg"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:Bundesliga",
+        "entity_name": "Bundesliga"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_43025834_frame_0",
+    "document_id": "DW_43025834",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Vladimir_Putin",
+        "entity_name": "Vladimir Putin"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_43099298_frame_0",
+    "document_id": "DW_43099298",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4310110_frame_0",
+    "document_id": "DW_4310110",
+    "frame_type": "cpn-election",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4327835_frame_0",
+    "document_id": "DW_4327835",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Florence_Hartmann",
+        "entity_name": "Florence Hartmann"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4331039_frame_0",
+    "document_id": "DW_4331039",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Iran",
+        "entity_name": "Iran"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_43621803_frame_0",
+    "document_id": "DW_43621803",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Heiko_Maas",
+        "entity_name": "Heiko Maas"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Ethiopia",
+        "entity_name": "Ethiopia"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Tanzania",
+        "entity_name": "Tanzania"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_43621803_frame_1",
+    "document_id": "DW_43621803",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_43650764_frame_0",
+    "document_id": "DW_43650764",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "doc:DW_43650764:concept:0",
+        "entity_name": "Jan Schmidt-Burbach"
+      },
+      {
+        "role": "interviewer",
+        "entity_id": "doc:DW_43650764:concept:15",
+        "entity_name": "Arthur Sullivan"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "DW"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_43885543_frame_0",
+    "document_id": "DW_43885543",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_43922367_frame_0",
+    "document_id": "DW_43922367",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "target",
+        "entity_id": "doc:DW_43922367:concept:2",
+        "entity_name": "Bombay Bhel"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Mississauga",
+        "entity_name": "Mississauga"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_44058849_frame_0",
+    "document_id": "DW_44058849",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Darmstadt",
+        "entity_name": "Darmstadt"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_44101876_frame_0",
+    "document_id": "DW_44101876",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:wikidata:Q1516190",
+        "entity_name": "Thomas Steg"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Volkswagen",
+        "entity_name": "Volkswagen Group"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_44101876:concept:5",
+        "entity_name": "executive"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_44141017_frame_0",
+    "document_id": "DW_44141017",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "doc:DW_44141017:concept:1",
+        "entity_name": "Carlo Alberto Capella"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Vatican",
+        "entity_name": "Vatican"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_44286357_frame_0",
+    "document_id": "DW_44286357",
+    "frame_type": "die",
+    "slots": [
+      {
+        "role": "victim",
+        "entity_id": "wiki:XXXTentacion",
+        "entity_name": "Jahseh Onfroy"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Florida",
+        "entity_name": "Florida"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_44286357:concept:7",
+        "entity_name": "Monday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_44329737_frame_1",
+    "document_id": "DW_44329737",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewer",
+        "entity_id": "doc:DW_44329737:concept:29",
+        "entity_name": "Srinivas Mazumdaru"
+      },
+      {
+        "role": "interviewee",
+        "entity_id": "doc:DW_44329737:concept:2",
+        "entity_name": "Mats Harborn"
+      },
+      {
+        "role": "media",
+        "entity_id": "wiki:Deutsche_Welle",
+        "entity_name": "DW"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_44593998_frame_0",
+    "document_id": "DW_44593998",
+    "frame_type": "end-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Laura_Codruța_Kövesi",
+        "entity_name": "Laura Codruta Kovesi"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_44593998:concept:9",
+        "entity_name": "anti-graft prosecutor"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Romania",
+        "entity_name": "Romania"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4460613_frame_0",
+    "document_id": "DW_4460613",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_44921122_frame_0",
+    "document_id": "DW_44921122",
+    "frame_type": "elect",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Emmerson_Mnangagwa",
+        "entity_name": "Emmerson Mnangagwa"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Zimbabwe",
+        "entity_name": "Zimbabwe"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_44993444_frame_0",
+    "document_id": "DW_44993444",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Siegburg",
+        "entity_name": "Siegburg"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4596868_frame_0",
+    "document_id": "DW_4596868",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:John_F._Smith_Jr.",
+        "entity_name": "John Smith"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Berlin",
+        "entity_name": "Berlin"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_4596868:concept:13",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4602593_frame_0",
+    "document_id": "DW_4602593",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4784538_frame_0",
+    "document_id": "DW_4784538",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "awardee",
+        "entity_id": "wiki:Elinor_Ostrom",
+        "entity_name": "Elinor Ostrom"
+      },
+      {
+        "role": "awardee",
+        "entity_id": "wiki:Oliver_E._Williamson",
+        "entity_name": "Oliver Williamson"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_479048_frame_0",
+    "document_id": "DW_479048",
+    "frame_type": "cpn-business",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4828626_frame_0",
+    "document_id": "DW_4828626",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "adjudicator",
+        "entity_id": "wiki:Constitutional_Court_of_the_Czech_Republic",
+        "entity_name": "Czech Constitutional Court"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_4828626:concept:8",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4888239_frame_0",
+    "document_id": "DW_4888239",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "time",
+        "entity_id": "doc:DW_4888239:concept:4",
+        "entity_name": "Thursday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_4967471_frame_0",
+    "document_id": "DW_4967471",
+    "frame_type": "cpn-award",
+    "slots": [
+      {
+        "role": "award",
+        "entity_id": "wiki:Right_Livelihood_Award",
+        "entity_name": "Alternative Nobel Prizes"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5197016_frame_0",
+    "document_id": "DW_5197016",
+    "frame_type": "trial-hearing",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "wiki:Continental_Airlines",
+        "entity_name": "Continental"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:France",
+        "entity_name": "France"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_5197016:concept:10",
+        "entity_name": "Tuesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5211834_frame_0",
+    "document_id": "DW_5211834",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Bhopal",
+        "entity_name": "Bhopal"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_5211834:concept:5",
+        "entity_name": "December 2, 1984"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5212103_frame_0",
+    "document_id": "DW_5212103",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Mumbai",
+        "entity_name": "Mumbai"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5212988_frame_0",
+    "document_id": "DW_5212988",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5213426_frame_0",
+    "document_id": "DW_5213426",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "time",
+        "entity_id": "doc:DW_5213426:concept:3",
+        "entity_name": "Monday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Thailand",
+        "entity_name": "Thailand"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5213628_frame_0",
+    "document_id": "DW_5213628",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5213636_frame_0",
+    "document_id": "DW_5213636",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Vladimir_Putin",
+        "entity_name": "Vladimir Putin"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Tarō_Asō",
+        "entity_name": "Taro Aso"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Tokyo",
+        "entity_name": "Tokyo"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5242130_frame_0",
+    "document_id": "DW_5242130",
+    "frame_type": "cpn-accident",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Cologne",
+        "entity_name": "Cologne"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5281586_frame_0",
+    "document_id": "DW_5281586",
+    "frame_type": "extradite",
+    "slots": [
+      {
+        "role": "destination",
+        "entity_id": "wiki:Spain",
+        "entity_name": "Spain"
+      },
+      {
+        "role": "origin",
+        "entity_id": "wiki:Guantanamo_Bay_detention_camp",
+        "entity_name": "Guantanamo"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5311411_frame_0",
+    "document_id": "DW_5311411",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5375360_frame_0",
+    "document_id": "DW_5375360",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:Wladimir_Klitschko",
+        "entity_name": "Vladimir Klitschko"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:Eddie_Chambers",
+        "entity_name": "\"Fast Eddie\" Chambers"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Düsseldorf",
+        "entity_name": "Duesseldorf"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_5375360:concept:8",
+        "entity_name": "Saturday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5594975_frame_0",
+    "document_id": "DW_5594975",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5639701_frame_0",
+    "document_id": "DW_5639701",
+    "frame_type": "attack",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Lahore",
+        "entity_name": "Lahore"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_5639701:concept:10",
+        "entity_name": "Monday night"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5660810_frame_0",
+    "document_id": "DW_5660810",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Spain",
+        "entity_name": "Spain"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5717715_frame_0",
+    "document_id": "DW_5717715",
+    "frame_type": "extradite",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Warren_Anderson_(American_businessman)",
+        "entity_name": "Warren Anderson"
+      },
+      {
+        "role": "origin",
+        "entity_id": "wiki:United_States",
+        "entity_name": "US"
+      },
+      {
+        "role": "destination",
+        "entity_id": "wiki:India",
+        "entity_name": "India"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5773862_frame_0",
+    "document_id": "DW_5773862",
+    "frame_type": "arrest-jail",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Germany",
+        "entity_name": "Germany"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Norway",
+        "entity_name": "Norway"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5856688_frame_0",
+    "document_id": "DW_5856688",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "loser",
+        "entity_id": "wiki:Nigeria_women's_national_under-20_football_team",
+        "entity_name": "Falconets"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:FIFA_U-20_Women's_World_Cup",
+        "entity_name": "U-20 Women's World Cup"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5873017_frame_0",
+    "document_id": "DW_5873017",
+    "frame_type": "start-position",
+    "slots": [
+      {
+        "role": "person",
+        "entity_id": "wiki:Bronisław_Komorowski",
+        "entity_name": "Bronislaw Komorowski"
+      },
+      {
+        "role": "position",
+        "entity_id": "doc:DW_5873017:concept:15",
+        "entity_name": "president"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Poland",
+        "entity_name": "Poland"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5873659_frame_0",
+    "document_id": "DW_5873659",
+    "frame_type": "cpn-election",
+    "slots": [
+      {
+        "role": "candidate",
+        "entity_id": "wiki:Paul_Kagame",
+        "entity_name": "Paul Kagame"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Rwanda",
+        "entity_name": "Rwanda"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_5873659:concept:6",
+        "entity_name": "Monday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_5913604_frame_0",
+    "document_id": "DW_5913604",
+    "frame_type": "demonstrate",
+    "slots": [
+      {
+        "role": "place",
+        "entity_id": "wiki:Bordeaux",
+        "entity_name": "Bordeaux"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_596591_frame_0",
+    "document_id": "DW_596591",
+    "frame_type": "declare-bankruptcy",
+    "slots": [
+      {
+        "role": "org",
+        "entity_id": "wiki:WorldCom",
+        "entity_name": "WorldCom"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:United_States",
+        "entity_name": "United States"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_6180268_frame_0",
+    "document_id": "DW_6180268",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "loser",
+        "entity_id": "wiki:FC_Schalke_04",
+        "entity_name": "Schalke"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:SV_Werder_Bremen",
+        "entity_name": "Werder Bremen"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:UEFA_Champions_League",
+        "entity_name": "Champion's League"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_6229003_frame_0",
+    "document_id": "DW_6229003",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:FC_Bayern_Munich",
+        "entity_name": "Bayern Munich"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:1._FC_Nürnberg",
+        "entity_name": "FC Nuremberg"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_6229003:concept:10",
+        "entity_name": "Sunday"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:Bundesliga",
+        "entity_name": "Bundesliga"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_6358587_frame_0",
+    "document_id": "DW_6358587",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Horst_Seehofer",
+        "entity_name": "Horst Seehofer"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Petr_Nečas",
+        "entity_name": "Petr Necas"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_6358587:concept:12",
+        "entity_name": "Monday"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Prague",
+        "entity_name": "Prague"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_6481891_frame_0",
+    "document_id": "DW_6481891",
+    "frame_type": "sentence",
+    "slots": [
+      {
+        "role": "defendant",
+        "entity_id": "doc:DW_6481891:concept:1",
+        "entity_name": "Jeremy Morlock"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_6585613_frame_0",
+    "document_id": "DW_6585613",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:Günter_Nooke",
+        "entity_name": "Günter Nooke"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_6629972_frame_0",
+    "document_id": "DW_6629972",
+    "frame_type": "cpn-interview",
+    "slots": [
+      {
+        "role": "interviewee",
+        "entity_id": "wiki:wikidata:Q1260687",
+        "entity_name": "Hans-Peter Keitel"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_761756_frame_0",
+    "document_id": "DW_761756",
+    "frame_type": "cpn-game",
+    "slots": [
+      {
+        "role": "winner",
+        "entity_id": "wiki:Rainer_Schüttler",
+        "entity_name": "Rainer Schüttler"
+      },
+      {
+        "role": "loser",
+        "entity_id": "wiki:Andy_Roddick",
+        "entity_name": "Andy Roddick"
+      },
+      {
+        "role": "competition",
+        "entity_id": "wiki:Australian_Open",
+        "entity_name": "Australian Open"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_886403_frame_0",
+    "document_id": "DW_886403",
+    "frame_type": "meet",
+    "slots": [
+      {
+        "role": "entity",
+        "entity_id": "wiki:Ariel_Sharon",
+        "entity_name": "Ariel Sharon"
+      },
+      {
+        "role": "entity",
+        "entity_id": "wiki:Mahmoud_Abbas",
+        "entity_name": "Mahmoud Abbas"
+      },
+      {
+        "role": "place",
+        "entity_id": "wiki:Aqaba",
+        "entity_name": "Aqaba"
+      },
+      {
+        "role": "time",
+        "entity_id": "doc:DW_886403:concept:9",
+        "entity_name": "Wednesday"
+      }
+    ],
+    "verified": true,
+    "source": "DWIE"
+  },
+  {
+    "frame_id": "DW_898307_frame_0",
+    "document_id": "DW_898307",
+    "frame_type": "todo",
+    "slots": [],
+    "verified": true,
+    "source": "DWIE"
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "document_count": 4555,
+  "corpus_hash": "3ebd60e926c29f0091eb1a203808a510adc686369f15599625e8d622a5787143"
+}
