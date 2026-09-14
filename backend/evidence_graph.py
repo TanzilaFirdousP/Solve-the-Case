@@ -519,7 +519,8 @@ class EvidenceGraph:
         max_nodes=None
     ):
 
-        graph = graph or self.graph
+        if graph is None:
+            graph = self.graph
 
         nodes = []
 
@@ -640,79 +641,244 @@ class EvidenceGraph:
     def document_subgraph(
         self,
         document_ids,
-        max_nodes=250
+        max_nodes=55
     ):
+        """
+        Build a compact connected graph for selected case documents.
 
-        requested = set(
+        Edges are selected before nodes so the visualization cannot
+        accidentally keep isolated nodes while losing their connections.
+        """
+
+        requested = {
             str(document_id)
             for document_id
             in document_ids
+        }
+
+        # -------------------------------------------------
+        # Collect every global edge supported by a case doc
+        # -------------------------------------------------
+
+        case_edges = []
+
+        for source, target, key, data in (
+            self.graph.edges(
+                keys=True,
+                data=True
+            )
+        ):
+
+            edge_document_id = str(
+                data.get(
+                    "document_id",
+                    ""
+                )
+            )
+
+            if edge_document_id not in requested:
+                continue
+
+            case_edges.append(
+                (
+                    source,
+                    target,
+                    key,
+                    dict(data),
+                )
+            )
+
+
+        # -------------------------------------------------
+        # Prefer meaningful links
+        # -------------------------------------------------
+
+        def edge_priority(edge):
+
+            _, _, _, data = edge
+
+            edge_type = data.get(
+                "edge_type",
+                ""
+            )
+
+            relation = data.get(
+                "relation",
+                ""
+            )
+
+            if edge_type == "relation":
+                return 5
+
+            if edge_type == "event_role":
+                return 4
+
+            if relation == "supported_by":
+                return 3
+
+            if relation == "mentioned_in":
+                return 1
+
+            return 2
+
+
+        ranked_edges = sorted(
+            case_edges,
+            key=edge_priority,
+            reverse=True,
         )
 
-        selected_nodes = set()
 
-        # -----------------------------------------
-        # Documents
-        # -----------------------------------------
+        selected_nodes = []
+        selected_set = set()
+        selected_edges = []
 
-        for document_id in requested:
 
-            node_id = (
+        def add_node(node_id):
+
+            if node_id in selected_set:
+                return True
+
+            if len(selected_nodes) >= max_nodes:
+                return False
+
+            selected_nodes.append(
+                node_id
+            )
+
+            selected_set.add(
+                node_id
+            )
+
+            return True
+
+
+        def add_edge_if_possible(edge):
+
+            source, target, _, _ = edge
+
+            needed = [
+                node_id
+                for node_id
+                in (source, target)
+                if node_id not in selected_set
+            ]
+
+            if (
+                len(selected_nodes)
+                + len(needed)
+                > max_nodes
+            ):
+                return False
+
+            add_node(source)
+            add_node(target)
+
+            selected_edges.append(
+                edge
+            )
+
+            return True
+
+
+        # -------------------------------------------------
+        # Guarantee every case document gets represented
+        # -------------------------------------------------
+
+        for document_id in sorted(
+            requested
+        ):
+
+            document_node = (
                 f"document:{document_id}"
             )
 
-            if self.graph.has_node(
-                node_id
-            ):
-                selected_nodes.add(
-                    node_id
+            document_edges = [
+                edge
+                for edge
+                in ranked_edges
+                if (
+                    edge[0] == document_node
+                    or edge[1] == document_node
+                )
+            ]
+
+            if document_edges:
+
+                add_edge_if_possible(
+                    document_edges[0]
                 )
 
-        # -----------------------------------------
-        # Entities appearing in those docs
-        # -----------------------------------------
+            elif self.graph.has_node(
+                document_node
+            ):
 
-        for entity in self.entities:
+                add_node(
+                    document_node
+                )
 
-            entity_docs = set(
-                entity.get(
-                    "document_ids",
-                    []
+
+        # -------------------------------------------------
+        # Fill remaining space with strongest relationships
+        # -------------------------------------------------
+
+        for edge in ranked_edges:
+
+            if edge in selected_edges:
+                continue
+
+            add_edge_if_possible(
+                edge
+            )
+
+
+        # -------------------------------------------------
+        # Construct the actual case graph
+        # -------------------------------------------------
+
+        case_graph = nx.MultiDiGraph()
+
+
+        for node_id in selected_nodes:
+
+            if not self.graph.has_node(
+                node_id
+            ):
+                continue
+
+            case_graph.add_node(
+                node_id,
+                **dict(
+                    self.graph.nodes[
+                        node_id
+                    ]
                 )
             )
 
-            if entity_docs & requested:
 
-                selected_nodes.add(
-                    entity["entity_id"]
-                )
-
-        # -----------------------------------------
-        # Events from those docs
-        # -----------------------------------------
-
-        for frame in self.frames:
+        # Add ALL relevant edges between selected nodes.
+        # This preserves additional context for the visual.
+        for source, target, key, data in (
+            case_edges
+        ):
 
             if (
-                frame["document_id"]
-                in requested
+                source not in selected_set
+                or
+                target not in selected_set
             ):
+                continue
 
-                selected_nodes.add(
-                    f"event:"
-                    f"{frame['frame_id']}"
-                )
+            case_graph.add_edge(
+                source,
+                target,
+                key=key,
+                **data
+            )
 
-        selected_nodes = list(
-            selected_nodes
-        )[:max_nodes]
-
-        subgraph = self.graph.subgraph(
-            selected_nodes
-        ).copy()
 
         return self.serialize_graph(
-            subgraph
+            case_graph
         )
 
 

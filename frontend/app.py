@@ -21,20 +21,80 @@ st.set_page_config(
 # BACKEND
 # =========================================================
 
-DEFAULT_BACKEND = os.getenv(
-    "DETECTIVE_API_URL",
-    "http://127.0.0.1:8000",
+# A deployed app can provide BACKEND_URL through Streamlit
+# secrets or DETECTIVE_API_URL through the environment.
+configured_backend = os.getenv(
+    "DETECTIVE_API_URL"
 )
 
 try:
-    DEFAULT_BACKEND = st.secrets.get(
+    secret_backend = st.secrets.get(
         "BACKEND_URL",
-        DEFAULT_BACKEND,
+        None,
     )
+
+    if secret_backend:
+        configured_backend = secret_backend
+
 except Exception:
     pass
 
-BACKEND_URL = DEFAULT_BACKEND
+
+def backend_is_alive(url):
+    try:
+        # trust_env=False is important on Windows systems
+        # with HTTP proxy environment variables.
+        with httpx.Client(
+            timeout=3.0,
+            trust_env=False,
+        ) as client:
+
+            response = client.get(
+                url.rstrip("/")
+                + "/health"
+            )
+
+            return (
+                response.status_code
+                == 200
+            )
+
+    except Exception:
+        return False
+
+
+# For local development, try both loopback forms.
+backend_candidates = [
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+]
+
+if configured_backend:
+    backend_candidates.append(
+        configured_backend
+    )
+
+
+BACKEND_URL = None
+
+for candidate_url in backend_candidates:
+
+    if backend_is_alive(
+        candidate_url
+    ):
+        BACKEND_URL = candidate_url
+        break
+
+
+# Keep a sensible fallback so any error message tells us
+# exactly where the frontend attempted to connect.
+if BACKEND_URL is None:
+
+    BACKEND_URL = (
+        configured_backend
+        or
+        "http://127.0.0.1:8000"
+    )
 
 
 # =========================================================
@@ -446,11 +506,15 @@ def api_get(
     timeout=30,
 ):
 
-    response = httpx.get(
-        BACKEND_URL.rstrip("/")
-        + path,
+    with httpx.Client(
         timeout=timeout,
-    )
+        trust_env=False,
+    ) as client:
+
+        response = client.get(
+            BACKEND_URL.rstrip("/")
+            + path
+        )
 
     response.raise_for_status()
 
@@ -463,12 +527,16 @@ def api_post(
     timeout=240,
 ):
 
-    response = httpx.post(
-        BACKEND_URL.rstrip("/")
-        + path,
-        json=payload,
+    with httpx.Client(
         timeout=timeout,
-    )
+        trust_env=False,
+    ) as client:
+
+        response = client.post(
+            BACKEND_URL.rstrip("/")
+            + path,
+            json=payload,
+        )
 
     response.raise_for_status()
 
@@ -599,118 +667,75 @@ def show_citations(
 
 def graph_to_dot(
     graph_data,
-    max_nodes=55,
-    max_edges=90,
+    max_nodes=18,
+    max_edges=30,
 ):
+    """
+    Produce a readable candidate-centred evidence graph.
 
-    nodes = (
-        graph_data.get(
-            "nodes",
-            []
-        )[:max_nodes]
+    The backend may contain many nodes and edges. For the UI we
+    deliberately show the suspects/candidates and their strongest
+    evidence connections rather than drawing the entire case graph.
+    """
+
+    all_nodes = graph_data.get(
+        "nodes",
+        []
     )
 
+    all_edges = graph_data.get(
+        "edges",
+        []
+    )
 
-    allowed_ids = {
-
-        node.get("id")
-
-        for node
-        in nodes
+    nodes_by_id = {
+        node.get("id"): node
+        for node in all_nodes
+        if node.get("id")
     }
 
 
-    lines = [
-        "digraph G {",
-        "rankdir=LR;",
-        'graph [bgcolor="transparent"];',
-        (
-            'node [fontsize=10, '
-            'fontcolor="#eadcc2", '
-            'color="#8c6b4b"];'
-        ),
-        (
-            'edge [fontsize=8, '
-            'fontcolor="#bba586", '
-            'color="#6f543d"];'
-        ),
-    ]
+    # =====================================================
+    # CASE CANDIDATES
+    # =====================================================
+
+    try:
+        focus_names = {
+            str(name).strip().lower()
+            for name in candidate_map.keys()
+        }
+    except Exception:
+        focus_names = set()
 
 
-    for node in nodes:
+    focus_ids = set()
 
-        node_id = str(
-            node.get(
-                "id",
-                ""
-            )
-        )
-
+    for node_id, node in nodes_by_id.items():
 
         label = str(
             node.get(
                 "label",
+                ""
+            )
+        ).strip().lower()
+
+        if label in focus_names:
+            focus_ids.add(
                 node_id
             )
-        )
 
 
-        if len(label) > 36:
+    # =====================================================
+    # DEGREE / IMPORTANCE
+    # =====================================================
 
-            label = (
-                label[:36]
-                + "..."
-            )
+    degree = {
+        node_id: 0
+        for node_id
+        in nodes_by_id
+    }
 
-
-        label = label.replace(
-            '"',
-            '\\"'
-        )
-
-
-        node_type = node.get(
-            "node_type"
-        )
-
-
-        shape = {
-            "document": "box",
-            "event": "diamond",
-            "entity": "ellipse",
-        }.get(
-            node_type,
-            "ellipse"
-        )
-
-
-        node_id_safe = node_id.replace(
-            '"',
-            '\\"'
-        )
-
-
-        lines.append(
-            (
-                f'"{node_id_safe}" '
-                f'[label="{label}", '
-                f'shape={shape}];'
-            )
-        )
-
-
-    edge_count = 0
-
-
-    for edge in graph_data.get(
-        "edges",
-        []
-    ):
-
-        if edge_count >= max_edges:
-
-            break
-
+    for edge in all_edges:
 
         source = edge.get(
             "source"
@@ -720,53 +745,514 @@ def graph_to_dot(
             "target"
         )
 
+        if source in degree:
+            degree[source] += 1
+
+        if target in degree:
+            degree[target] += 1
+
+
+    def edge_score(edge):
+
+        edge_type = edge.get(
+            "edge_type",
+            ""
+        )
+
+        relation = edge.get(
+            "relation",
+            ""
+        )
+
+        score = {
+            "relation": 10,
+            "event_role": 9,
+            "evidence": 3,
+        }.get(
+            edge_type,
+            1
+        )
+
+        if relation == "supported_by":
+            score += 5
+
+        if relation == "mentioned_in":
+            score -= 1
+
+        source = edge.get(
+            "source"
+        )
+
+        target = edge.get(
+            "target"
+        )
+
+        if source in focus_ids:
+            score += 15
+
+        if target in focus_ids:
+            score += 15
+
+        return score
+
+
+    # =====================================================
+    # SELECT A SMALL CONNECTED VIEW
+    # =====================================================
+
+    selected_ids = set(
+        focus_ids
+    )
+
+    selected_edges = []
+
+
+    ranked_edges = sorted(
+        all_edges,
+        key=edge_score,
+        reverse=True,
+    )
+
+
+    # First: edges directly involving candidates.
+    for edge in ranked_edges:
+
+        source = edge.get(
+            "source"
+        )
+
+        target = edge.get(
+            "target"
+        )
 
         if (
-            source not in allowed_ids
-            or
-            target not in allowed_ids
+            source not in focus_ids
+            and
+            target not in focus_ids
         ):
+            continue
 
+        new_nodes = {
+            source,
+            target,
+        } - selected_ids
+
+        if (
+            len(selected_ids)
+            + len(new_nodes)
+            > max_nodes
+        ):
+            continue
+
+        selected_ids.update(
+            new_nodes
+        )
+
+        selected_edges.append(
+            edge
+        )
+
+
+    # Second: expand one step from already-selected nodes.
+    for edge in ranked_edges:
+
+        if len(
+            selected_edges
+        ) >= max_edges:
+            break
+
+        source = edge.get(
+            "source"
+        )
+
+        target = edge.get(
+            "target"
+        )
+
+        if (
+            source not in selected_ids
+            and
+            target not in selected_ids
+        ):
+            continue
+
+        new_nodes = {
+            source,
+            target,
+        } - selected_ids
+
+        if (
+            len(selected_ids)
+            + len(new_nodes)
+            > max_nodes
+        ):
+            continue
+
+        selected_ids.update(
+            new_nodes
+        )
+
+        selected_edges.append(
+            edge
+        )
+
+
+    # If candidate matching somehow fails, use the
+    # highest-degree connected nodes instead.
+    if not selected_ids:
+
+        ranked_nodes = sorted(
+            nodes_by_id.keys(),
+            key=lambda node_id:
+                degree.get(
+                    node_id,
+                    0
+                ),
+            reverse=True,
+        )
+
+        selected_ids = set(
+            ranked_nodes[
+                :max_nodes
+            ]
+        )
+
+
+    # Include all useful edges among selected nodes.
+    usable_edges = []
+
+    seen = set()
+
+    for edge in ranked_edges:
+
+        source = edge.get(
+            "source"
+        )
+
+        target = edge.get(
+            "target"
+        )
+
+        if (
+            source not in selected_ids
+            or
+            target not in selected_ids
+        ):
+            continue
+
+        identity = (
+            str(source),
+            str(target),
+            str(
+                edge.get(
+                    "label",
+                    ""
+                )
+            ),
+        )
+
+        if identity in seen:
+            continue
+
+        seen.add(
+            identity
+        )
+
+        usable_edges.append(
+            edge
+        )
+
+        if len(
+            usable_edges
+        ) >= max_edges:
+            break
+
+
+    # =====================================================
+    # HELPERS
+    # =====================================================
+
+    def esc(value):
+
+        return (
+            str(value or "")
+            .replace(
+                "\\",
+                "\\\\"
+            )
+            .replace(
+                '"',
+                '\\"'
+            )
+            .replace(
+                "\n",
+                " "
+            )
+        )
+
+
+    # =====================================================
+    # GRAPHVIZ
+    # =====================================================
+
+    lines = [
+        "digraph G {",
+
+        "rankdir=LR;",
+
+        (
+            'graph ['
+            'bgcolor="transparent", '
+            'overlap=false, '
+            'splines=spline, '
+            'nodesep=0.55, '
+            'ranksep=1.0, '
+            'pad=0.35'
+            '];'
+        ),
+
+        (
+            'node ['
+            'style="filled", '
+            'fontname="Georgia", '
+            'fontsize=11, '
+            'fontcolor="#eadcc2", '
+            'penwidth=1.5'
+            '];'
+        ),
+
+        (
+            'edge ['
+            'fontname="Georgia", '
+            'fontsize=8, '
+            'fontcolor="#c7b08e", '
+            'color="#755b44", '
+            'arrowsize=0.75'
+            '];'
+        ),
+    ]
+
+
+    # =====================================================
+    # DRAW NODES
+    # =====================================================
+
+    for node_id in selected_ids:
+
+        node = nodes_by_id.get(
+            node_id
+        )
+
+        if not node:
             continue
 
 
+        node_type = node.get(
+            "node_type",
+            "entity"
+        )
+
         label = str(
-            edge.get(
+            node.get(
                 "label",
+                node_id
+            )
+        )
+
+
+        # Make source-document labels compact.
+        if node_type == "document":
+
+            if len(label) > 26:
+                label = (
+                    label[:26]
+                    + "..."
+                )
+
+            label = (
+                "?? "
+                + label
+            )
+
+
+        elif node_type == "event":
+
+            if len(label) > 24:
+                label = (
+                    label[:24]
+                    + "..."
+                )
+
+            label = (
+                "? "
+                + label
+            )
+
+
+        else:
+
+            if len(label) > 25:
+                label = (
+                    label[:25]
+                    + "..."
+                )
+
+
+        safe_id = esc(
+            node_id
+        )
+
+        safe_label = esc(
+            label
+        )
+
+
+        # Candidates get visually emphasized.
+        if node_id in focus_ids:
+
+            shape = "doubleoctagon"
+            fill = "#5a3f29"
+            border = "#d0a66b"
+            width = 2.5
+
+
+        elif node_type == "document":
+
+            shape = "note"
+            fill = "#30251b"
+            border = "#a98658"
+            width = 1.4
+
+
+        elif node_type == "event":
+
+            shape = "diamond"
+            fill = "#3a281c"
+            border = "#ba7e50"
+            width = 1.5
+
+
+        else:
+
+            shape = "ellipse"
+            fill = "#211a14"
+            border = "#806148"
+            width = 1.2
+
+
+        lines.append(
+            (
+                f'"{safe_id}" '
+                "["
+                f'label="{safe_label}", '
+                f'shape={shape}, '
+                f'fillcolor="{fill}", '
+                f'color="{border}", '
+                f'penwidth={width}'
+                "];"
+            )
+        )
+
+
+    # =====================================================
+    # DRAW EDGES
+    # =====================================================
+
+    for edge in usable_edges:
+
+        source = esc(
+            edge.get(
+                "source"
+            )
+        )
+
+        target = esc(
+            edge.get(
+                "target"
+            )
+        )
+
+        relation = str(
+            edge.get(
+                "relation",
                 ""
             )
-        ).replace(
-            '"',
-            '\\"'
+        )
+
+        edge_type = edge.get(
+            "edge_type",
+            ""
         )
 
 
-        source_safe = str(
-            source
-        ).replace(
-            '"',
-            '\\"'
-        )
+        # Generic mention edges are visually quieter.
+        if relation == "mentioned_in":
+
+            label = ""
+            color = "#514235"
+            style = "dashed"
+            width = 0.8
 
 
-        target_safe = str(
-            target
-        ).replace(
-            '"',
-            '\\"'
+        elif relation == "supported_by":
+
+            label = "source"
+            color = "#76604b"
+            style = "solid"
+            width = 1.0
+
+
+        else:
+
+            label = (
+                edge.get(
+                    "label"
+                )
+                or relation
+            )
+
+            label = str(
+                label
+            ).replace(
+                "_",
+                " "
+            )
+
+            if edge_type == "relation":
+
+                color = "#c18b5d"
+                width = 2.0
+
+            elif edge_type == "event_role":
+
+                color = "#a98561"
+                width = 1.6
+
+            else:
+
+                color = "#755b44"
+                width = 1.1
+
+            style = "solid"
+
+
+        label = esc(
+            label
         )
 
 
         lines.append(
             (
-                f'"{source_safe}" -> '
-                f'"{target_safe}" '
-                f'[label="{label}"];'
+                f'"{source}" -> '
+                f'"{target}" '
+                "["
+                f'label="{label}", '
+                f'color="{color}", '
+                f'penwidth={width}, '
+                f'style="{style}"'
+                "];"
             )
         )
-
-
-        edge_count += 1
 
 
     lines.append(
@@ -803,19 +1289,24 @@ st.html(
 
 try:
 
-    api_get(
-        "/health"
+    health_result = api_get(
+        "/health",
+        timeout=5,
     )
 
-except Exception:
+except Exception as error:
 
     st.error(
-        """
-        The case archive is unavailable.
+        f"""
+        **The case archive could not reach the backend.**
 
-        Start the backend first:
+        Backend address attempted:
 
-        `python -m uvicorn backend.main:app --reload`
+        `{BACKEND_URL}`
+
+        Error:
+
+        `{type(error).__name__}: {error}`
         """
     )
 
