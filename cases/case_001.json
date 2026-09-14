@@ -1,0 +1,29 @@
+{
+  "case_id": "afghanistan_security_network",
+  "title": "The Afghanistan Security Network",
+  "description": "A multi-document investigation covering Taliban prisoner transfers and a series of security incidents in Afghanistan. The investigator must distinguish direct operational evidence from association, spokesperson attribution, and competing explanations.",
+  "question": "Which candidate actor is most strongly supported by the available evidence as the central actor linking these Afghanistan security incidents, and what evidence weakens that theory?",
+  "document_ids": [
+    "DW_16380200",
+    "DW_17786779",
+    "DW_19532542",
+    "DW_4099423"
+  ],
+  "candidate_names": [
+    "Taliban",
+    "Zabiullah Mujahid",
+    "NATO",
+    "Hamid Karzai"
+  ],
+  "unverified_evidence": [
+    {
+      "chunk_id": "afghanistan_unverified_0",
+      "document_id": "CASE_AFG_UNVERIFIED_001",
+      "title": "Anonymous field rumor",
+      "text": "An anonymous social-media post claims that one of the attacks was retaliation for the earlier Taliban prisoner handover. The post provides no named source, documentary support, or independent verification.",
+      "entity_ids": [],
+      "verified": false,
+      "source": "synthetic_demo_unverified"
+    }
+  ]
+}

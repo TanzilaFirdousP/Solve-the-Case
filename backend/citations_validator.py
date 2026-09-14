@@ -136,6 +136,7 @@ class CitationValidator:
         )
 
         self.corpus_by_chunk = {
+
             document["chunk_id"]:
                 document
 
@@ -155,17 +156,24 @@ class CitationValidator:
         allowed_document_ids=None,
     ):
         """
-        Validate citations proposed by an agent.
+        Deterministically validate citations proposed
+        by an agent.
 
-        A citation is valid only when:
+        Normal DWIE evidence must:
+        1. exist in the processed corpus,
+        2. have actually been retrieved,
+        3. use the correct document ID,
+        4. belong to the active case when case filtering
+           is enabled.
 
-        1. chunk_id exists in processed corpus
-        2. chunk was ACTUALLY returned by retrieval
-        3. document_id matches the chunk
-        4. document belongs to current case (if restricted)
+        Case-specific external evidence is also allowed,
+        but ONLY when:
+        1. it was actually returned by retrieval,
+        2. it is explicitly marked verified=False.
 
-        Whether the original DWIE evidence is verified or
-        unverified is preserved in source_verified.
+        This lets the system expose misleading/unverified
+        clues while preventing the agent from silently
+        promoting them to verified source material.
         """
 
         # ---------------------------------------------
@@ -193,6 +201,7 @@ class CitationValidator:
                     )
                 )
 
+
         # ---------------------------------------------
         # Retrieved evidence lookup
         # ---------------------------------------------
@@ -200,6 +209,18 @@ class CitationValidator:
         retrieved_by_chunk = {}
 
         for evidence in retrieved_evidence:
+
+            # Support Pydantic EvidenceItem objects
+            # as well as dictionaries.
+            if hasattr(
+                evidence,
+                "model_dump"
+            ):
+
+                evidence = (
+                    evidence.model_dump()
+                )
+
 
             chunk_id = evidence.get(
                 "chunk_id"
@@ -211,8 +232,9 @@ class CitationValidator:
                     chunk_id
                 ] = evidence
 
+
         # ---------------------------------------------
-        # Optional case restriction
+        # Optional active-case restriction
         # ---------------------------------------------
 
         allowed = None
@@ -220,64 +242,49 @@ class CitationValidator:
         if allowed_document_ids is not None:
 
             allowed = {
-                str(document_id)
+
+                str(
+                    document_id
+                )
 
                 for document_id
                 in allowed_document_ids
             }
 
+
         valid = []
+
         invalid = []
 
+
         # ---------------------------------------------
-        # Validate each citation
+        # Validate each proposed citation
         # ---------------------------------------------
 
         for proposal in (
             normalized_proposals
         ):
 
-            chunk_id = proposal.chunk_id
+            chunk_id = (
+                proposal.chunk_id
+            )
 
             document_id = str(
                 proposal.document_id
             )
 
-            # -----------------------------------------
-            # Check 1:
-            # Does this chunk even exist?
-            # -----------------------------------------
 
-            corpus_chunk = (
-                self.corpus_by_chunk.get(
-                    chunk_id
-                )
-            )
-
-            if corpus_chunk is None:
-
-                invalid.append(
-                    InvalidCitation(
-                        chunk_id=chunk_id,
-
-                        document_id=
-                            document_id,
-
-                        claim=
-                            proposal.claim,
-
-                        reason=
-                            "Chunk does not "
-                            "exist in corpus."
-                    )
-                )
-
-                continue
-
-            # -----------------------------------------
-            # Check 2:
-            # Was it actually retrieved?
-            # -----------------------------------------
+            # =================================================
+            # CHECK 1:
+            # Was this chunk actually retrieved?
+            # =================================================
+            #
+            # This is the most important grounding rule.
+            #
+            # Even if a chunk exists somewhere in the corpus,
+            # the LLM cannot cite it unless retrieval supplied
+            # it during this agent run.
+            # =================================================
 
             retrieved_chunk = (
                 retrieved_by_chunk.get(
@@ -289,7 +296,9 @@ class CitationValidator:
 
                 invalid.append(
                     InvalidCitation(
-                        chunk_id=chunk_id,
+
+                        chunk_id=
+                            chunk_id,
 
                         document_id=
                             document_id,
@@ -297,26 +306,106 @@ class CitationValidator:
                         claim=
                             proposal.claim,
 
-                        reason=
-                            "Chunk exists but "
-                            "was not retrieved "
-                            "during this agent "
-                            "search."
+                        reason=(
+                            "Chunk was not retrieved "
+                            "during this agent search."
+                        ),
                     )
                 )
 
                 continue
 
-            # -----------------------------------------
-            # Check 3:
+
+            # =================================================
+            # CHECK 2:
+            # Determine authoritative source record
+            # =================================================
+            #
+            # Normal DWIE evidence exists in the processed
+            # corpus.
+            #
+            # Case-specific external evidence will not exist
+            # there, so it is accepted only when explicitly
+            # marked verified=False.
+            # =================================================
+
+            corpus_chunk = (
+                self.corpus_by_chunk.get(
+                    chunk_id
+                )
+            )
+
+
+            is_external = (
+                corpus_chunk is None
+            )
+
+
+            if is_external:
+
+                # -----------------------------------------
+                # External evidence MUST be unverified.
+                # -----------------------------------------
+
+                if (
+                    retrieved_chunk.get(
+                        "verified",
+                        True
+                    )
+                    is not False
+                ):
+
+                    invalid.append(
+                        InvalidCitation(
+
+                            chunk_id=
+                                chunk_id,
+
+                            document_id=
+                                document_id,
+
+                            claim=
+                                proposal.claim,
+
+                            reason=(
+                                "External evidence must "
+                                "be explicitly marked "
+                                "unverified."
+                            ),
+                        )
+                    )
+
+                    continue
+
+
+                # The retrieved record itself becomes
+                # the authoritative source for this
+                # case-specific clue.
+                source_chunk = (
+                    retrieved_chunk
+                )
+
+
+            else:
+
+                # Normal DWIE evidence is grounded in
+                # processed_documents.json.
+                source_chunk = (
+                    corpus_chunk
+                )
+
+
+            # =================================================
+            # CHECK 3:
             # Correct document ID?
-            # -----------------------------------------
+            # =================================================
 
             real_document_id = str(
-                corpus_chunk[
+                source_chunk[
                     "document_id"
                 ]
             )
+
 
             if (
                 document_id
@@ -325,7 +414,9 @@ class CitationValidator:
 
                 invalid.append(
                     InvalidCitation(
-                        chunk_id=chunk_id,
+
+                        chunk_id=
+                            chunk_id,
 
                         document_id=
                             document_id,
@@ -338,27 +429,37 @@ class CitationValidator:
                             "does not match the "
                             "chunk's real "
                             "document_id."
-                        )
+                        ),
                     )
                 )
 
                 continue
 
-            # -----------------------------------------
-            # Check 4:
-            # Is document part of case?
-            # -----------------------------------------
+
+            # =================================================
+            # CHECK 4:
+            # Is normal corpus evidence part of the case?
+            # =================================================
+            #
+            # External evidence is defined by the case
+            # manifest itself, so it does not need to use
+            # one of the original DWIE document IDs.
+            # =================================================
 
             if (
                 allowed is not None
                 and
                 real_document_id
                 not in allowed
+                and
+                not is_external
             ):
 
                 invalid.append(
                     InvalidCitation(
-                        chunk_id=chunk_id,
+
+                        chunk_id=
+                            chunk_id,
 
                         document_id=
                             document_id,
@@ -366,21 +467,24 @@ class CitationValidator:
                         claim=
                             proposal.claim,
 
-                        reason=
+                        reason=(
                             "Citation comes from "
                             "a document outside "
                             "the active case."
+                        ),
                     )
                 )
 
                 continue
 
-            # -----------------------------------------
-            # Produce trusted citation
-            # -----------------------------------------
+
+            # =================================================
+            # PRODUCE TRUSTED CITATION
+            # =================================================
 
             excerpt = best_excerpt(
-                corpus_chunk.get(
+
+                source_chunk.get(
                     "text",
                     ""
                 ),
@@ -388,9 +492,12 @@ class CitationValidator:
                 proposal.claim
             )
 
+
             valid.append(
                 Citation(
-                    chunk_id=chunk_id,
+
+                    chunk_id=
+                        chunk_id,
 
                     document_id=
                         real_document_id,
@@ -399,15 +506,22 @@ class CitationValidator:
                         proposal.claim,
 
                     title=
-                        corpus_chunk.get(
+                        source_chunk.get(
                             "title"
                         ),
 
                     evidence_excerpt=
                         excerpt,
 
+                    # -------------------------------------
+                    # Critical reliability field.
+                    #
+                    # DWIE evidence -> True
+                    # synthetic rumor -> False
+                    # -------------------------------------
+
                     source_verified=bool(
-                        corpus_chunk.get(
+                        source_chunk.get(
                             "verified",
                             False
                         )
@@ -425,15 +539,25 @@ class CitationValidator:
                 )
             )
 
+
+        # =================================================
+        # FINAL RESULT
+        # =================================================
+
         return (
             CitationValidationResult(
-                valid_citations=valid,
+
+                valid_citations=
+                    valid,
 
                 invalid_citations=
                     invalid,
 
                 all_valid=(
-                    len(invalid) == 0
+                    len(
+                        invalid
+                    )
+                    == 0
                 ),
             )
         )
@@ -449,15 +573,19 @@ if __name__ == "__main__":
         EvidenceRetriever
     )
 
+
     retriever = (
         EvidenceRetriever()
     )
+
 
     validator = (
         CitationValidator()
     )
 
+
     evidence = retriever.search(
+
         query=(
             "Abdelghani Mzoudi "
             "September 11 attacks"
@@ -465,13 +593,24 @@ if __name__ == "__main__":
 
         limit=5,
 
-        mode="hybrid"
+        mode="hybrid",
     )
+
+
+    if not evidence:
+
+        raise RuntimeError(
+            "No evidence retrieved."
+        )
+
 
     proposal = (
         CitationProposal(
+
             chunk_id=
-                evidence[0]["chunk_id"],
+                evidence[0][
+                    "chunk_id"
+                ],
 
             document_id=
                 evidence[0][
@@ -480,19 +619,24 @@ if __name__ == "__main__":
 
             claim=(
                 "Abdelghani Mzoudi "
-                "was on trial in "
-                "Germany over alleged "
-                "involvement in the "
+                "was discussed in "
+                "connection with the "
                 "September 11 attacks."
             ),
         )
     )
 
-    result = validator.validate(
-        proposals=[proposal],
 
-        retrieved_evidence=evidence
+    result = validator.validate(
+
+        proposals=[
+            proposal
+        ],
+
+        retrieved_evidence=
+            evidence,
     )
+
 
     print(
         result.model_dump_json(

@@ -89,11 +89,18 @@ def min_max_normalize(values):
     if len(values) == 0:
         return values
 
-    minimum = float(values.min())
-    maximum = float(values.max())
+    minimum = float(
+        values.min()
+    )
+
+    maximum = float(
+        values.max()
+    )
 
     if maximum == minimum:
-        return np.zeros_like(values)
+        return np.zeros_like(
+            values
+        )
 
     return (
         values - minimum
@@ -116,6 +123,7 @@ class EvidenceRetriever:
         if not (
             PROCESSED_DOCUMENTS_PATH.exists()
         ):
+
             raise FileNotFoundError(
                 "Processed evidence not found. "
                 "Run backend/preprocess.py first."
@@ -132,17 +140,27 @@ class EvidenceRetriever:
         )
 
         if not self.documents:
+
             raise ValueError(
                 "Processed evidence corpus is empty."
             )
 
         # -------------------------------------------------
-        # Lexical retrieval: BM25
+        # Lexical retrieval: full-corpus BM25
+        #
+        # This remains useful for ordinary whole-corpus
+        # searches. Case-specific searches build an active
+        # BM25 index inside search().
         # -------------------------------------------------
 
         tokenized_documents = [
-            tokenize(document["text"])
-            for document in self.documents
+
+            tokenize(
+                document["text"]
+            )
+
+            for document
+            in self.documents
         ]
 
         self.bm25 = BM25Okapi(
@@ -153,7 +171,9 @@ class EvidenceRetriever:
         # Semantic retrieval
         # -------------------------------------------------
 
-        self.model_name = model_name
+        self.model_name = (
+            model_name
+        )
 
         self.semantic_model = (
             SentenceTransformer(
@@ -182,7 +202,8 @@ class EvidenceRetriever:
 
         if (
             EMBEDDINGS_PATH.exists()
-            and EMBEDDINGS_META_PATH.exists()
+            and
+            EMBEDDINGS_META_PATH.exists()
         ):
 
             try:
@@ -194,27 +215,37 @@ class EvidenceRetriever:
                     )
                 )
 
-                cached_hash = metadata.get(
-                    "corpus_hash"
+                cached_hash = (
+                    metadata.get(
+                        "corpus_hash"
+                    )
                 )
 
-                cached_model = metadata.get(
-                    "model_name"
+                cached_model = (
+                    metadata.get(
+                        "model_name"
+                    )
                 )
 
-                cached_count = metadata.get(
-                    "document_count"
+                cached_count = (
+                    metadata.get(
+                        "document_count"
+                    )
                 )
 
                 if (
                     cached_hash
                     == self.corpus_hash
 
-                    and cached_model
+                    and
+                    cached_model
                     == self.model_name
 
-                    and cached_count
-                    == len(self.documents)
+                    and
+                    cached_count
+                    == len(
+                        self.documents
+                    )
                 ):
 
                     embeddings = np.load(
@@ -223,11 +254,16 @@ class EvidenceRetriever:
 
                     if (
                         embeddings.shape[0]
-                        == len(self.documents)
+                        ==
+                        len(
+                            self.documents
+                        )
                     ):
+
                         return embeddings
 
             except Exception:
+
                 # Corrupt / incompatible cache.
                 # Rebuild below.
                 pass
@@ -237,7 +273,9 @@ class EvidenceRetriever:
         )
 
 
-    def _create_embeddings(self):
+    def _create_embeddings(
+        self
+    ):
 
         print(
             "Creating semantic embeddings "
@@ -245,8 +283,11 @@ class EvidenceRetriever:
         )
 
         texts = [
+
             document["text"]
-            for document in self.documents
+
+            for document
+            in self.documents
         ]
 
         embeddings = (
@@ -274,11 +315,14 @@ class EvidenceRetriever:
         )
 
         metadata = {
+
             "model_name":
                 self.model_name,
 
             "document_count":
-                len(self.documents),
+                len(
+                    self.documents
+                ),
 
             "corpus_hash":
                 self.corpus_hash,
@@ -301,7 +345,7 @@ class EvidenceRetriever:
 
 
     # =====================================================
-    # RAW SCORES
+    # RAW FULL-CORPUS SCORES
     # =====================================================
 
     def _lexical_scores(
@@ -313,8 +357,10 @@ class EvidenceRetriever:
             query
         )
 
-        scores = self.bm25.get_scores(
-            query_tokens
+        scores = (
+            self.bm25.get_scores(
+                query_tokens
+            )
         )
 
         return np.asarray(
@@ -340,6 +386,7 @@ class EvidenceRetriever:
 
         # Because embeddings are normalized,
         # dot product == cosine similarity.
+
         scores = (
             self.embeddings
             @ query_embedding
@@ -361,6 +408,7 @@ class EvidenceRetriever:
         limit=5,
         mode="hybrid",
         document_ids=None,
+        extra_evidence=None,
         lexical_weight=
             DEFAULT_HYBRID_LEXICAL_WEIGHT,
         semantic_weight=
@@ -380,26 +428,314 @@ class EvidenceRetriever:
             "semantic",
             "hybrid",
         }:
+
             raise ValueError(
                 "mode must be one of: "
                 "lexical, semantic, hybrid"
             )
 
+
+        # =================================================
+        # CASE / DOCUMENT FILTER
+        # =================================================
+
+        allowed_document_ids = None
+
+        if document_ids is not None:
+
+            allowed_document_ids = {
+
+                str(
+                    document_id
+                )
+
+                for document_id
+                in document_ids
+            }
+
+
+        # =================================================
+        # BUILD ACTIVE SEARCH CORPUS
+        #
+        # The normal DWIE corpus uses its cached
+        # embeddings.
+        #
+        # Case-specific evidence can be injected
+        # temporarily without permanently changing
+        # processed_documents.json.
+        # =================================================
+
+        candidate_documents = []
+
+        candidate_embeddings = []
+
+        seen_chunk_ids = set()
+
+
         # -------------------------------------------------
-        # Calculate both scores once.
+        # Normal DWIE evidence
         # -------------------------------------------------
 
-        lexical_raw = (
-            self._lexical_scores(
-                query
+        for index, document in enumerate(
+            self.documents
+        ):
+
+            document_id = str(
+                document[
+                    "document_id"
+                ]
             )
+
+            if (
+                allowed_document_ids
+                is not None
+                and
+                document_id
+                not in allowed_document_ids
+            ):
+
+                continue
+
+
+            candidate_documents.append(
+                document.copy()
+            )
+
+            candidate_embeddings.append(
+                self.embeddings[
+                    index
+                ]
+            )
+
+            seen_chunk_ids.add(
+                document[
+                    "chunk_id"
+                ]
+            )
+
+
+        # -------------------------------------------------
+        # Case-specific extra evidence
+        #
+        # This is where misleading / unverified clues
+        # from a case manifest enter retrieval.
+        # -------------------------------------------------
+
+        extra_positions = []
+
+        extra_texts = []
+
+
+        for evidence in (
+            extra_evidence
+            or []
+        ):
+
+            # Pydantic models are supported directly.
+            if hasattr(
+                evidence,
+                "model_dump"
+            ):
+
+                evidence = (
+                    evidence.model_dump()
+                )
+
+
+            evidence = dict(
+                evidence
+            )
+
+
+            chunk_id = evidence.get(
+                "chunk_id"
+            )
+
+            text = str(
+                evidence.get(
+                    "text",
+                    ""
+                )
+            ).strip()
+
+
+            if (
+                not chunk_id
+                or
+                not text
+            ):
+
+                continue
+
+
+            # Prevent duplicate chunk IDs.
+            if chunk_id in seen_chunk_ids:
+
+                continue
+
+
+            # External case evidence defaults to
+            # unverified unless explicitly specified.
+            evidence.setdefault(
+                "verified",
+                False
+            )
+
+            evidence.setdefault(
+                "source",
+                "case_extra"
+            )
+
+            evidence.setdefault(
+                "entity_ids",
+                []
+            )
+
+
+            candidate_documents.append(
+                evidence
+            )
+
+
+            # Semantic embedding will be generated
+            # below only for these extra chunks.
+            candidate_embeddings.append(
+                None
+            )
+
+
+            extra_positions.append(
+                len(
+                    candidate_embeddings
+                )
+                - 1
+            )
+
+            extra_texts.append(
+                text
+            )
+
+
+            seen_chunk_ids.add(
+                chunk_id
+            )
+
+
+        # No evidence exists after filtering.
+        if not candidate_documents:
+
+            return []
+
+
+        # =================================================
+        # LEXICAL RETRIEVAL
+        #
+        # BM25 is calculated against the ACTIVE case
+        # corpus, not all 802 DWIE articles.
+        # =================================================
+
+        tokenized_documents = [
+
+            tokenize(
+                document["text"]
+            )
+
+            for document
+            in candidate_documents
+        ]
+
+
+        active_bm25 = BM25Okapi(
+            tokenized_documents
         )
+
+
+        lexical_raw = np.asarray(
+
+            active_bm25.get_scores(
+                tokenize(
+                    query
+                )
+            ),
+
+            dtype=np.float32,
+        )
+
+
+        # =================================================
+        # SEMANTIC EMBEDDINGS FOR EXTRA EVIDENCE
+        # =================================================
+
+        if extra_texts:
+
+            extra_embeddings = (
+                self.semantic_model.encode(
+                    extra_texts,
+
+                    convert_to_numpy=True,
+
+                    normalize_embeddings=True,
+                )
+            )
+
+
+            extra_embeddings = np.asarray(
+                extra_embeddings,
+                dtype=np.float32,
+            )
+
+
+            for (
+                position,
+                embedding
+            ) in zip(
+                extra_positions,
+                extra_embeddings,
+            ):
+
+                candidate_embeddings[
+                    position
+                ] = embedding
+
+
+        # All None placeholders have now been replaced.
+        embedding_matrix = np.vstack(
+            candidate_embeddings
+        ).astype(
+            np.float32
+        )
+
+
+        # =================================================
+        # SEMANTIC QUERY SCORE
+        # =================================================
+
+        query_embedding = (
+            self.semantic_model.encode(
+                [query],
+
+                convert_to_numpy=True,
+
+                normalize_embeddings=True,
+            )[0]
+        )
+
 
         semantic_raw = (
-            self._semantic_scores(
-                query
-            )
+            embedding_matrix
+            @ query_embedding
         )
+
+
+        semantic_raw = np.asarray(
+            semantic_raw,
+            dtype=np.float32,
+        )
+
+
+        # =================================================
+        # NORMALIZATION
+        # =================================================
 
         lexical_normalized = (
             min_max_normalize(
@@ -407,19 +743,25 @@ class EvidenceRetriever:
             )
         )
 
+
         # Cosine similarity is approximately
         # -1 to +1.
+
         semantic_normalized = np.clip(
             (
-                semantic_raw + 1.0
-            ) / 2.0,
+                semantic_raw
+                + 1.0
+            )
+            / 2.0,
+
             0.0,
-            1.0
+            1.0,
         )
 
-        # -------------------------------------------------
-        # Final retrieval score
-        # -------------------------------------------------
+
+        # =================================================
+        # FINAL RETRIEVAL SCORE
+        # =================================================
 
         if mode == "lexical":
 
@@ -427,141 +769,144 @@ class EvidenceRetriever:
                 lexical_normalized
             )
 
+
         elif mode == "semantic":
 
             final_scores = (
                 semantic_normalized
             )
 
+
         else:
 
             weight_total = (
                 lexical_weight
-                + semantic_weight
+                +
+                semantic_weight
             )
 
+
             if weight_total <= 0:
+
                 raise ValueError(
                     "Hybrid retrieval weights "
                     "must sum to > 0."
                 )
 
-            lexical_weight = (
+
+            normalized_lexical_weight = (
                 lexical_weight
-                / weight_total
+                /
+                weight_total
             )
 
-            semantic_weight = (
+
+            normalized_semantic_weight = (
                 semantic_weight
-                / weight_total
+                /
+                weight_total
             )
+
 
             final_scores = (
-                lexical_weight
-                * lexical_normalized
+
+                normalized_lexical_weight
+                *
+                lexical_normalized
 
                 +
 
-                semantic_weight
-                * semantic_normalized
+                normalized_semantic_weight
+                *
+                semantic_normalized
             )
 
-        # -------------------------------------------------
-        # Optional case/document filtering
-        # -------------------------------------------------
 
-        allowed_document_ids = None
-
-        if document_ids is not None:
-
-            allowed_document_ids = {
-                str(document_id)
-                for document_id
-                in document_ids
-            }
-
-        candidate_indices = []
-
-        for index, document in enumerate(
-            self.documents
-        ):
-
-            if (
-                allowed_document_ids
-                is not None
-                and
-                document["document_id"]
-                not in allowed_document_ids
-            ):
-                continue
-
-            candidate_indices.append(
-                index
-            )
-
-        # -------------------------------------------------
-        # Rank
-        # -------------------------------------------------
+        # =================================================
+        # RANK RESULTS
+        # =================================================
 
         ranked_indices = sorted(
-            candidate_indices,
+
+            range(
+                len(
+                    candidate_documents
+                )
+            ),
 
             key=lambda index:
                 float(
-                    final_scores[index]
+                    final_scores[
+                        index
+                    ]
                 ),
 
-            reverse=True
+            reverse=True,
+
         )[:limit]
 
-        # -------------------------------------------------
-        # Structured results
-        # -------------------------------------------------
+
+        # =================================================
+        # STRUCTURED RESULTS
+        # =================================================
 
         results = []
+
 
         for index in ranked_indices:
 
             document = (
-                self.documents[
+                candidate_documents[
                     index
                 ].copy()
             )
+
 
             document[
                 "bm25_score"
             ] = round(
                 float(
-                    lexical_raw[index]
+                    lexical_raw[
+                        index
+                    ]
                 ),
                 4
             )
+
 
             document[
                 "semantic_score"
             ] = round(
                 float(
-                    semantic_raw[index]
+                    semantic_raw[
+                        index
+                    ]
                 ),
                 4
             )
+
 
             document[
                 "retrieval_score"
             ] = round(
                 float(
-                    final_scores[index]
+                    final_scores[
+                        index
+                    ]
                 ),
                 4
             )
+
 
             document[
                 "retrieval_mode"
             ] = mode
 
+
             results.append(
                 document
             )
+
 
         return results
 
@@ -594,7 +939,9 @@ if __name__ == "__main__":
 
         print(
             "Chunk:",
-            result["chunk_id"]
+            result[
+                "chunk_id"
+            ]
         )
 
         print(
@@ -619,8 +966,17 @@ if __name__ == "__main__":
         )
 
         print(
+            "Verified:",
+            result.get(
+                "verified"
+            )
+        )
+
+        print(
             "Preview:",
-            result["text"][:250]
+            result[
+                "text"
+            ][:250]
         )
 
         print()

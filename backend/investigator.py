@@ -461,6 +461,10 @@ GROUNDING RULES:
   be treated as established fact.
 - If competing explanations remain plausible, say so.
 - Prefer uncertainty over unsupported certainty.
+- Preserve uncertainty exactly as expressed in evidence.
+  Terms such as "alleged", "reportedly", "anonymous",
+  "suspected", "claimed", and "believed to be" must not
+  be converted into established facts.
 
 Return ONLY valid JSON in this structure:
 
@@ -599,7 +603,9 @@ RETRIEVED EVIDENCE.
         question,
         document_ids=None,
         candidates=None,
+        extra_evidence=None,
     ):
+    
 
         question = question.strip()
 
@@ -662,6 +668,9 @@ RETRIEVED EVIDENCE.
 
                     document_ids=
                         allowed_document_ids,
+
+                    extra_evidence=
+                        extra_evidence,
                 )
             )
 

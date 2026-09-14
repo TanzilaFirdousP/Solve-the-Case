@@ -622,6 +622,7 @@ Use only the supplied evidence for citations.
         investigation,
         document_ids=None,
         candidates=None,
+        extra_evidence=None,
     ):
 
         if not isinstance(
@@ -707,7 +708,7 @@ Use only the supplied evidence for citations.
             queries,
             start=1
         ):
-
+            
             results = (
                 self.retriever.search(
                     query=search.query,
@@ -719,6 +720,9 @@ Use only the supplied evidence for citations.
 
                     document_ids=
                         allowed_document_ids,
+
+                    extra_evidence=
+                        extra_evidence,
                 )
             )
 
