@@ -11,11 +11,10 @@ from dotenv import load_dotenv
 # Load detective-ai/.env
 load_dotenv()
 
-
-DEFAULT_GEMINI_MODEL = "gemini-3.8-flash"
+DEFAULT_GEMINI_MODEL = "gemini-3.6-flash"
 
 FALLBACK_MODELS = [
-    "gemini-3.7-flash",
+    "gemini-3.6-flash",
     "gemini-3.5-flash",
 ]
 
